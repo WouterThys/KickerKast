@@ -1,0 +1,364 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F2550 ]
+[d frameptr 4065 ]
+"8 /opt/microchip/xc8/v1.37/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 /opt/microchip/xc8/v1.37/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"62 /opt/microchip/xc8/v1.37/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.37/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 /opt/microchip/xc8/v1.37/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 /opt/microchip/xc8/v1.37/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 /opt/microchip/xc8/v1.37/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"10 /opt/microchip/xc8/v1.37/sources/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 /opt/microchip/xc8/v1.37/sources/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.37/sources/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.37/sources/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"32 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
+[v _selectNextSegment selectNextSegment `(v  1 e 1 0 ]
+"48
+[v _convertValueToSegment convertValueToSegment `(v  1 e 1 0 ]
+"68
+[v _writeSegment writeSegment `(v  1 e 1 0 ]
+"76
+[v _D_SEG_Init D_SEG_Init `(v  1 e 1 0 ]
+"98
+[v _D_SEG_Add D_SEG_Add `(v  1 e 1 0 ]
+"117
+[v _D_SEG_Start D_SEG_Start `(v  1 e 1 0 ]
+"131
+[v _D_SEG_Update D_SEG_Update `(v  1 e 1 0 ]
+"138
+[v _LowInterruptRoutine LowInterruptRoutine `IIL(v  1 e 1 0 ]
+"48 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Main.c
+[v _main main `(v  1 e 1 0 ]
+"108
+[v _updateScore updateScore `(v  1 e 1 0 ]
+"146
+[v _checkInputs checkInputs `(uc  1 e 1 0 ]
+"162
+[v _setSegments setSegments `(v  1 e 1 0 ]
+"179
+[v _determineWinner determineWinner `(uc  1 e 1 0 ]
+"191
+[v _delay delay `(v  1 e 1 0 ]
+"2378 /opt/microchip/xc8/v1.37/include/pic18f2550.h
+[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
+[s S220 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+]
+"2417
+[s S228 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+`uc 1 OSC2 1 0 :1:6 
+]
+[s S236 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 VREFM 1 0 :1:2 
+`uc 1 VREFP 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S242 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S245 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S247 . 1 `S220 1 . 1 0 `S228 1 . 1 0 `S236 1 . 1 0 `S242 1 . 1 0 `S245 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES247  1 e 1 @3968 ]
+"2516
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"3144
+[v _TRISA TRISA `VEuc  1 e 1 @3986 ]
+[s S423 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+]
+"3174
+[u S439 . 1 `S423 1 . 1 0 `S220 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES439  1 e 1 @3986 ]
+"3341
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+"3562
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S373 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 VCFG 1 0 :2:4 
+]
+"5759
+[s S376 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+]
+[s S383 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+]
+[s S386 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 VCFG01 1 0 :1:4 
+]
+[s S389 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 VCFG11 1 0 :1:5 
+]
+[u S392 . 1 `S373 1 . 1 0 `S376 1 . 1 0 `S383 1 . 1 0 `S386 1 . 1 0 `S389 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES392  1 e 1 @4033 ]
+[s S54 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"6737
+[s S56 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S59 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S62 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S65 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S68 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S77 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_IPEN 1 0 :1:7 
+]
+[s S80 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 nIPEN 1 0 :1:7 
+]
+[u S88 . 1 `S54 1 . 1 0 `S56 1 . 1 0 `S59 1 . 1 0 `S62 1 . 1 0 `S65 1 . 1 0 `S68 1 . 1 0 `S77 1 . 1 0 `S80 1 . 1 0 ]
+[v _RCONbits RCONbits `VES88  1 e 1 @4048 ]
+[s S28 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"7234
+[s S35 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S39 . 1 `S28 1 . 1 0 `S35 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES39  1 e 1 @4053 ]
+[s S181 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"7653
+[s S184 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S193 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S198 . 1 `S181 1 . 1 0 `S184 1 . 1 0 `S193 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES198  1 e 1 @4081 ]
+[s S132 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"7734
+[s S141 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S150 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S154 . 1 `S132 1 . 1 0 `S141 1 . 1 0 `S150 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES154  1 e 1 @4082 ]
+[s S21 . 6 `uc 1 ID 1 0 `*.39VEuc 1 PORT 2 1 `uc 1 portBit 1 3 `uc 1 value 1 4 `uc 1 converted 1 5 ]
+"21 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
+[v _segments segments `[4]S21  1 e 24 0 ]
+"22
+[v _segmentCnt segmentCnt `uc  1 e 1 0 ]
+"23
+[v _currentSeg currentSeg `uc  1 e 1 0 ]
+"44 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Main.c
+[v _score_1 score_1 `uc  1 e 1 0 ]
+"45
+[v _score_2 score_2 `uc  1 e 1 0 ]
+"48
+[v _main main `(v  1 e 1 0 ]
+{
+"106
+} 0
+"108
+[v _updateScore updateScore `(v  1 e 1 0 ]
+{
+[v updateScore@which which `uc  1 a 1 wreg ]
+[v updateScore@which which `uc  1 a 1 wreg ]
+[v updateScore@how how `uc  1 p 1 33 ]
+[v updateScore@which which `uc  1 a 1 34 ]
+"144
+} 0
+"162
+[v _setSegments setSegments `(v  1 e 1 0 ]
+{
+[v setSegments@player player `uc  1 a 1 wreg ]
+[v setSegments@player player `uc  1 a 1 wreg ]
+[v setSegments@value value `uc  1 p 1 31 ]
+[v setSegments@player player `uc  1 a 1 32 ]
+"177
+} 0
+"8 /opt/microchip/xc8/v1.37/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 26 ]
+[v ___awmod@counter counter `uc  1 a 1 25 ]
+"8
+[v ___awmod@dividend dividend `i  1 p 2 21 ]
+[v ___awmod@divisor divisor `i  1 p 2 23 ]
+"35
+} 0
+"8 /opt/microchip/xc8/v1.37/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"11
+[v ___awdiv@quotient quotient `i  1 a 2 27 ]
+"12
+[v ___awdiv@sign sign `uc  1 a 1 26 ]
+[v ___awdiv@counter counter `uc  1 a 1 25 ]
+"8
+[v ___awdiv@dividend dividend `i  1 p 2 21 ]
+[v ___awdiv@divisor divisor `i  1 p 2 23 ]
+"42
+} 0
+"131 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
+[v _D_SEG_Update D_SEG_Update `(v  1 e 1 0 ]
+{
+[v D_SEG_Update@which which `uc  1 a 1 wreg ]
+[v D_SEG_Update@which which `uc  1 a 1 wreg ]
+[v D_SEG_Update@value value `uc  1 p 1 29 ]
+"133
+[v D_SEG_Update@which which `uc  1 a 1 30 ]
+"136
+} 0
+"48
+[v _convertValueToSegment convertValueToSegment `(v  1 e 1 0 ]
+{
+[s S21 . 6 `uc 1 ID 1 0 `*.39VEuc 1 PORT 2 1 `uc 1 portBit 1 3 `uc 1 value 1 4 `uc 1 converted 1 5 ]
+[v convertValueToSegment@segment segment `*.39S21  1 p 2 21 ]
+[v convertValueToSegment@data data `uc  1 p 1 23 ]
+"66
+} 0
+"179 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Main.c
+[v _determineWinner determineWinner `(uc  1 e 1 0 ]
+{
+"189
+} 0
+"146
+[v _checkInputs checkInputs `(uc  1 e 1 0 ]
+{
+"160
+} 0
+"191
+[v _delay delay `(v  1 e 1 0 ]
+{
+"192
+[v delay@i i `ui  1 a 2 24 ]
+"191
+[v delay@ms ms `ui  1 p 2 21 ]
+"197
+} 0
+"117 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
+[v _D_SEG_Start D_SEG_Start `(v  1 e 1 0 ]
+{
+"123
+} 0
+"76
+[v _D_SEG_Init D_SEG_Init `(v  1 e 1 0 ]
+{
+"96
+} 0
+"98
+[v _D_SEG_Add D_SEG_Add `(v  1 e 1 0 ]
+{
+[v D_SEG_Add@ID ID `uc  1 a 1 wreg ]
+[s S21 . 6 `uc 1 ID 1 0 `*.39VEuc 1 PORT 2 1 `uc 1 portBit 1 3 `uc 1 value 1 4 `uc 1 converted 1 5 ]
+"105
+[v D_SEG_Add@temp temp `S21  1 a 6 27 ]
+"100
+[v D_SEG_Add@i i `uc  1 a 1 26 ]
+"98
+[v D_SEG_Add@ID ID `uc  1 a 1 wreg ]
+[v D_SEG_Add@port port `*.39VEuc  1 p 2 21 ]
+[v D_SEG_Add@portPin portPin `uc  1 p 1 23 ]
+[v D_SEG_Add@ID ID `uc  1 a 1 25 ]
+"115
+} 0
+"138
+[v _LowInterruptRoutine LowInterruptRoutine `IIL(v  1 e 1 0 ]
+{
+"145
+} 0
+"68
+[v _writeSegment writeSegment `(v  1 e 1 0 ]
+{
+"71
+} 0
+"32
+[v _selectNextSegment selectNextSegment `(v  1 e 1 0 ]
+{
+"42
+[v selectNextSegment@select select `uc  1 a 1 2 ]
+"46
+} 0
