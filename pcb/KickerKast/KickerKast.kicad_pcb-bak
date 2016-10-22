@@ -3,9 +3,9 @@
   (general
     (links 91)
     (no_connects 0)
-    (area 0 0 0 0)
+    (area 52.111 62.074379 99.389001 134.615)
     (thickness 1.6)
-    (drawings 4)
+    (drawings 10)
     (tracks 263)
     (zones 0)
     (modules 29)
@@ -37,7 +37,7 @@
   )
 
   (setup
-    (last_trace_width 0.508)
+    (last_trace_width 0.25)
     (user_trace_width 0.1524)
     (user_trace_width 0.254)
     (user_trace_width 0.381)
@@ -303,12 +303,12 @@
     )
   )
 
-  (module Capacitors_ThroughHole:C_Disc_D3_P2.5 (layer F.Cu) (tedit 57FFD988) (tstamp 57FA282F)
+  (module Capacitors_ThroughHole:C_Disc_D3_P2.5 (layer F.Cu) (tedit 580B6C4C) (tstamp 57FA282F)
     (at 80.01 87.63)
     (descr "Capacitor 3mm Disc, Pitch 2.5mm")
     (tags Capacitor)
     (path /57FA446C)
-    (fp_text reference C4 (at 1.25 -2.5) (layer F.SilkS)
+    (fp_text reference C4 (at -2.286 0) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 1n (at 1.27 2.54) (layer F.Fab) hide
@@ -355,7 +355,7 @@
       (net 2 GND))
   )
 
-  (module LEDs:LED-3MM (layer F.Cu) (tedit 57FFD8D6) (tstamp 57FA283C)
+  (module LEDs:LED-3MM (layer F.Cu) (tedit 580B6C3A) (tstamp 57FA283C)
     (at 90.17 69.85)
     (descr "LED 3mm round vertical")
     (tags "LED  3mm round vertical")
@@ -376,7 +376,7 @@
     (fp_arc (start 1.301 0.034) (end 0.25 -1.1) (angle 85.7) (layer F.SilkS) (width 0.15))
     (fp_arc (start 1.311 0.034) (end 3.051 0.994) (angle 110) (layer F.SilkS) (width 0.15))
     (fp_arc (start 1.301 0.034) (end 2.335 1.094) (angle 87.5) (layer F.SilkS) (width 0.15))
-    (fp_text user K (at -1.69 1.74) (layer F.SilkS)
+    (fp_text user K (at -0.762 -2.794) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (pad 1 thru_hole rect (at 0 0 90) (size 2 2) (drill 1.00076) (layers *.Cu *.Mask F.SilkS)
@@ -568,12 +568,12 @@
     )
   )
 
-  (module Pin_Headers:Pin_Header_Straight_2x05 (layer F.Cu) (tedit 57FFD8BC) (tstamp 57FA2878)
+  (module Pin_Headers:Pin_Header_Straight_2x05 (layer F.Cu) (tedit 580B6C6B) (tstamp 57FA2878)
     (at 62.23 83.82 90)
     (descr "Through hole pin header")
     (tags "pin header")
     (path /57FA1D91)
-    (fp_text reference P5 (at 0 -5.1 90) (layer F.SilkS)
+    (fp_text reference P5 (at -1.016 -12.446 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 7SEG_1 (at 0 -3.1 90) (layer F.Fab) hide
@@ -618,7 +618,7 @@
     )
   )
 
-  (module Pin_Headers:Pin_Header_Straight_2x05 (layer F.Cu) (tedit 57FFD8C4) (tstamp 57FA2886)
+  (module Pin_Headers:Pin_Header_Straight_2x05 (layer F.Cu) (tedit 580B6C7C) (tstamp 57FA2886)
     (at 77.724 83.82 90)
     (descr "Through hole pin header")
     (tags "pin header")
@@ -792,12 +792,12 @@
     )
   )
 
-  (module Resistors_ThroughHole:Resistor_Horizontal_RM10mm (layer F.Cu) (tedit 57FFD8B2) (tstamp 57FA28A8)
+  (module Resistors_ThroughHole:Resistor_Horizontal_RM10mm (layer F.Cu) (tedit 57FFE46A) (tstamp 57FA28A8)
     (at 57.15 85.09 90)
     (descr "Resistor, Axial,  RM 10mm, 1/3W")
     (tags "Resistor Axial RM 10mm 1/3W")
     (path /57FA4CBA)
-    (fp_text reference R1 (at 5.32892 -3.50012 90) (layer F.SilkS)
+    (fp_text reference R1 (at 5.334 0 90) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 10k (at 5.08 3.81 90) (layer F.Fab) hide
@@ -856,12 +856,12 @@
     )
   )
 
-  (module Resistors_ThroughHole:Resistor_Horizontal_RM10mm (layer F.Cu) (tedit 57FFD858) (tstamp 57FA28B4)
+  (module Resistors_ThroughHole:Resistor_Horizontal_RM10mm (layer F.Cu) (tedit 580B6C51) (tstamp 57FA28B4)
     (at 96.52 87.63 180)
     (descr "Resistor, Axial,  RM 10mm, 1/3W")
     (tags "Resistor Axial RM 10mm 1/3W")
     (path /57FA3E3C)
-    (fp_text reference R3 (at 5.32892 -3.50012 180) (layer F.SilkS)
+    (fp_text reference R3 (at 5.08 0 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 300 (at 5.08 3.81 180) (layer F.Fab) hide
@@ -1141,12 +1141,12 @@
     )
   )
 
-  (module Housings_DIP:DIP-28_W7.62mm_LongPads (layer F.Cu) (tedit 57FFD7A0) (tstamp 57FA2906)
+  (module Housings_DIP:DIP-28_W7.62mm_LongPads (layer F.Cu) (tedit 580B6C60) (tstamp 57FA2906)
     (at 62.23 99.06 90)
     (descr "28-lead dip package, row spacing 7.62 mm (300 mils), longer pads")
     (tags "dil dip 2.54 300")
     (path /57F952B9)
-    (fp_text reference U1 (at 0 -5.22 90) (layer F.SilkS)
+    (fp_text reference U1 (at 2.286 -14.224 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value PIC18F2550 (at 0 -3.72 90) (layer F.Fab) hide
@@ -1226,12 +1226,12 @@
     )
   )
 
-  (module Crystals:Crystal_HC49-U_Vertical (layer F.Cu) (tedit 57FFD85E) (tstamp 57FA290C)
+  (module Crystals:Crystal_HC49-U_Vertical (layer F.Cu) (tedit 580B6C2E) (tstamp 57FA290C)
     (at 83.82 104.14)
     (descr "Crystal Quarz HC49/U vertical stehend")
     (tags "Crystal Quarz HC49/U vertical stehend")
     (path /57FA5AE9)
-    (fp_text reference Y1 (at 0 -3.81) (layer F.SilkS)
+    (fp_text reference Y1 (at 0 3.302) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Crystal (at 0 3.81) (layer F.Fab) hide
@@ -1294,6 +1294,24 @@
       (net 33 "Net-(U1-Pad10)"))
   )
 
+  (gr_text "sensor 2" (at 64.516 130.302 90) (layer F.SilkS)
+    (effects (font (size 0.508 0.508) (thickness 0.127)))
+  )
+  (gr_text "sensor 1" (at 55.88 130.302 90) (layer F.SilkS)
+    (effects (font (size 0.508 0.508) (thickness 0.127)))
+  )
+  (gr_text 5V (at 86.36 77.47) (layer F.SilkS)
+    (effects (font (size 0.508 0.508) (thickness 0.127)))
+  )
+  (gr_text gnd (at 77.978 70.358) (layer F.SilkS)
+    (effects (font (size 0.508 0.508) (thickness 0.127)))
+  )
+  (gr_text "7-segment 2" (at 75.438 82.55 90) (layer F.SilkS)
+    (effects (font (size 0.508 0.508) (thickness 0.127)))
+  )
+  (gr_text "7-segment 1" (at 59.944 82.55 90) (layer F.SilkS)
+    (effects (font (size 0.508 0.508) (thickness 0.127)))
+  )
   (gr_line (start 54.356 133.604) (end 54.356 65.786) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 99.314 133.604) (end 54.356 133.604) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 99.314 65.786) (end 99.314 133.604) (angle 90) (layer Edge.Cuts) (width 0.15))
