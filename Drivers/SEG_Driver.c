@@ -5,6 +5,7 @@
 
 #include "PORT_Driver.h"
 #include "SEG_Driver.h"
+#include "SEG_Map.h"
 
 /*******************************************************************************
  *          DEFINES
@@ -52,16 +53,16 @@ void convertValueToSegment(SEG_Segment *segment, uint8_t data) {
     }
     // Select corresponding value
     switch(data) {
-        case 0: segment -> converted = 0b00111111; break;
-        case 1: segment -> converted = 0b00000110; break;
-        case 2: segment -> converted = 0b01011011; break;
-        case 3: segment -> converted = 0b01001111; break;
-        case 4: segment -> converted = 0b01100110; break;
-        case 5: segment -> converted = 0b01101101; break;
-        case 6: segment -> converted = 0b01111101; break;
-        case 7: segment -> converted = 0b00000111; break;
-        case 8: segment -> converted = 0b01111111; break;
-        case 9: segment -> converted = 0b01101111; break;
+        case 0: segment -> converted = SEG_0; break;
+        case 1: segment -> converted = SEG_1; break;
+        case 2: segment -> converted = SEG_2; break;
+        case 3: segment -> converted = SEG_3; break;
+        case 4: segment -> converted = SEG_4; break;
+        case 5: segment -> converted = SEG_5; break;
+        case 6: segment -> converted = SEG_6; break;
+        case 7: segment -> converted = SEG_7; break;
+        case 8: segment -> converted = SEG_8; break;
+        case 9: segment -> converted = SEG_9; break;
     }
 }
 

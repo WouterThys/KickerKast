@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.37 build -260352376 
-                                                                                               Sat Nov 19 12:24:08 2016
+                                                                                               Sat Nov 19 13:04:43 2016
 
 Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110536
      1                           	processor	18F2550
@@ -992,7 +992,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    986                           
    987 ;; *************** function _D_SEG_Update *****************
    988 ;; Defined at:
-   989 ;;		line 131 in file "Drivers/SEG_Driver.c"
+   989 ;;		line 132 in file "Drivers/SEG_Driver.c"
    990 ;; Parameters:    Size  Location     Type
    991 ;;  which           1    wreg     unsigned char 
    992 ;;  value           1   29[COMRAM] unsigned char 
@@ -1032,13 +1032,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1026                           ;D_SEG_Update@which stored from wreg
   1027  000676  6E1F               	movwf	D_SEG_Update@which,c
   1028                           
-  1029                           ;SEG_Driver.c: 133: if(which < segmentCnt) {
+  1029                           ;SEG_Driver.c: 134: if(which < segmentCnt) {
   1030  000678  5028               	movf	_segmentCnt,w,c
   1031  00067A  5C1F               	subwf	D_SEG_Update@which,w,c
   1032  00067C  B0D8               	btfsc	status,0,c
   1033  00067E  0012               	return	
   1034                           
-  1035                           ;SEG_Driver.c: 134: convertValueToSegment(&segments[which], value);
+  1035                           ;SEG_Driver.c: 135: convertValueToSegment(&segments[which], value);
   1036  000680  501F               	movf	D_SEG_Update@which,w,c
   1037  000682  0D06               	mullw	6
   1038  000684  0E29               	movlw	low _segments
@@ -1061,7 +1061,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1055                           
   1056 ;; *************** function _convertValueToSegment *****************
   1057 ;; Defined at:
-  1058 ;;		line 48 in file "Drivers/SEG_Driver.c"
+  1058 ;;		line 49 in file "Drivers/SEG_Driver.c"
   1059 ;; Parameters:    Size  Location     Type
   1060 ;;  segment         2   21[COMRAM] PTR struct .
   1061 ;;		 -> segments(24), 
@@ -1097,13 +1097,13 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1091  0000CA                     _convertValueToSegment:
   1092                           	opt stack 24
   1093                           
-  1094                           ;SEG_Driver.c: 50: while(data >= 10) {
+  1094                           ;SEG_Driver.c: 51: while(data >= 10) {
   1095                           
   1096                           ;incstack = 0
   1097  0000CA  D002               	goto	l27
   1098  0000CC                     l1107:
   1099                           
-  1100                           ;SEG_Driver.c: 51: data -= 10;
+  1100                           ;SEG_Driver.c: 52: data -= 10;
   1101  0000CC  0E0A               	movlw	10
   1102  0000CE  5E18               	subwf	convertValueToSegment@data,f,c
   1103  0000D0                     l27:
@@ -1117,7 +1117,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1111  0000DE  26D9               	addwf	fsr2l,f,c
   1112  0000E0  5017               	movf	convertValueToSegment@segment+1,w,c
   1113  0000E2  22DA               	addwfc	fsr2h,f,c
-  1114  0000E4  0E3F               	movlw	63
+  1114  0000E4  0E77               	movlw	119
   1115  0000E6  6EDF               	movwf	indf2,c
   1116  0000E8  0012               	return	
   1117  0000EA                     l1111:
@@ -1126,7 +1126,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1120  0000F0  26D9               	addwf	fsr2l,f,c
   1121  0000F2  5017               	movf	convertValueToSegment@segment+1,w,c
   1122  0000F4  22DA               	addwfc	fsr2h,f,c
-  1123  0000F6  0E06               	movlw	6
+  1123  0000F6  0E41               	movlw	65
   1124  0000F8  6EDF               	movwf	indf2,c
   1125  0000FA  0012               	return	
   1126  0000FC                     l1113:
@@ -1135,7 +1135,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1129  000102  26D9               	addwf	fsr2l,f,c
   1130  000104  5017               	movf	convertValueToSegment@segment+1,w,c
   1131  000106  22DA               	addwfc	fsr2h,f,c
-  1132  000108  0E5B               	movlw	91
+  1132  000108  0E3B               	movlw	59
   1133  00010A  6EDF               	movwf	indf2,c
   1134  00010C  0012               	return	
   1135  00010E                     l1115:
@@ -1144,7 +1144,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1138  000114  26D9               	addwf	fsr2l,f,c
   1139  000116  5017               	movf	convertValueToSegment@segment+1,w,c
   1140  000118  22DA               	addwfc	fsr2h,f,c
-  1141  00011A  0E4F               	movlw	79
+  1141  00011A  0E6B               	movlw	107
   1142  00011C  6EDF               	movwf	indf2,c
   1143  00011E  0012               	return	
   1144  000120                     l1117:
@@ -1153,7 +1153,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1147  000126  26D9               	addwf	fsr2l,f,c
   1148  000128  5017               	movf	convertValueToSegment@segment+1,w,c
   1149  00012A  22DA               	addwfc	fsr2h,f,c
-  1150  00012C  0E66               	movlw	102
+  1150  00012C  0E4D               	movlw	77
   1151  00012E  6EDF               	movwf	indf2,c
   1152  000130  0012               	return	
   1153  000132                     l1119:
@@ -1162,7 +1162,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1156  000138  26D9               	addwf	fsr2l,f,c
   1157  00013A  5017               	movf	convertValueToSegment@segment+1,w,c
   1158  00013C  22DA               	addwfc	fsr2h,f,c
-  1159  00013E  0E6D               	movlw	109
+  1159  00013E  0E6E               	movlw	110
   1160  000140  6EDF               	movwf	indf2,c
   1161  000142  0012               	return	
   1162  000144                     l1121:
@@ -1171,7 +1171,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1165  00014A  26D9               	addwf	fsr2l,f,c
   1166  00014C  5017               	movf	convertValueToSegment@segment+1,w,c
   1167  00014E  22DA               	addwfc	fsr2h,f,c
-  1168  000150  0E7D               	movlw	125
+  1168  000150  0E7E               	movlw	126
   1169  000152  6EDF               	movwf	indf2,c
   1170  000154  0012               	return	
   1171  000156                     l1123:
@@ -1180,7 +1180,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1174  00015C  26D9               	addwf	fsr2l,f,c
   1175  00015E  5017               	movf	convertValueToSegment@segment+1,w,c
   1176  000160  22DA               	addwfc	fsr2h,f,c
-  1177  000162  0E07               	movlw	7
+  1177  000162  0E43               	movlw	67
   1178  000164  6EDF               	movwf	indf2,c
   1179  000166  0012               	return	
   1180  000168                     l1125:
@@ -1201,7 +1201,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1195  000186  0E6F               	movlw	111
   1196  000188  6EDF               	movwf	indf2,c
   1197                           
-  1198                           ;SEG_Driver.c: 65: }
+  1198                           ;SEG_Driver.c: 66: }
   1199  00018A  0012               	return	
   1200  00018C                     l1131:
   1201  00018C  5018               	movf	convertValueToSegment@data,w,c
@@ -1291,10 +1291,10 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1285  000592                     _determineWinner:
   1286                           	opt stack 27
   1287                           
-  1288                           ;Main.c: 180: if (score_1 >= 10) {
+  1288                           ;Main.c: 180: if (score_1 > 10) {
   1289                           
   1290                           ;incstack = 0
-  1291  000592  0E09               	movlw	9
+  1291  000592  0E0A               	movlw	10
   1292  000594  6426               	cpfsgt	_score_1,c
   1293  000596  D016               	goto	l1041
   1294                           
@@ -1324,8 +1324,8 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1318  0005C4                     l1041:
   1319                           
   1320                           ;Main.c: 182: }
-  1321                           ;Main.c: 184: if (score_2 >= 10) {
-  1322  0005C4  0E09               	movlw	9
+  1321                           ;Main.c: 184: if (score_2 > 10) {
+  1322  0005C4  0E0A               	movlw	10
   1323  0005C6  6427               	cpfsgt	_score_2,c
   1324  0005C8  D016               	goto	l1049
   1325                           
@@ -1540,7 +1540,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1534                           
   1535 ;; *************** function _D_SEG_Start *****************
   1536 ;; Defined at:
-  1537 ;;		line 117 in file "Drivers/SEG_Driver.c"
+  1537 ;;		line 118 in file "Drivers/SEG_Driver.c"
   1538 ;; Parameters:    Size  Location     Type
   1539 ;;		None
   1540 ;; Auto vars:     Size  Location     Type
@@ -1574,7 +1574,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1568  0006D6                     _D_SEG_Start:
   1569                           	opt stack 27
   1570                           
-  1571                           ;SEG_Driver.c: 119: T0CONbits.TMR0ON = 1;
+  1571                           ;SEG_Driver.c: 120: T0CONbits.TMR0ON = 1;
   1572                           
   1573                           ;incstack = 0
   1574  0006D6  8ED5               	bsf	4053,7,c	;volatile
@@ -1593,7 +1593,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1587                           
   1588 ;; *************** function _D_SEG_Init *****************
   1589 ;; Defined at:
-  1590 ;;		line 76 in file "Drivers/SEG_Driver.c"
+  1590 ;;		line 77 in file "Drivers/SEG_Driver.c"
   1591 ;; Parameters:    Size  Location     Type
   1592 ;;		None
   1593 ;; Auto vars:     Size  Location     Type
@@ -1627,50 +1627,50 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1621  000650                     _D_SEG_Init:
   1622                           	opt stack 27
   1623                           
-  1624                           ;SEG_Driver.c: 78: segmentCnt = 0;
+  1624                           ;SEG_Driver.c: 79: segmentCnt = 0;
   1625                           
   1626                           ;incstack = 0
   1627  000650  0E00               	movlw	0
   1628  000652  6E28               	movwf	_segmentCnt,c
   1629                           
-  1630                           ;SEG_Driver.c: 79: currentSeg = 0;
+  1630                           ;SEG_Driver.c: 80: currentSeg = 0;
   1631  000654  0E00               	movlw	0
   1632  000656  6E25               	movwf	_currentSeg,c
   1633                           
-  1634                           ;SEG_Driver.c: 82: T0CONbits.TMR0ON = 0;
+  1634                           ;SEG_Driver.c: 83: T0CONbits.TMR0ON = 0;
   1635  000658  9ED5               	bcf	4053,7,c	;volatile
   1636                           
-  1637                           ;SEG_Driver.c: 83: T0CONbits.T08BIT = 1;
+  1637                           ;SEG_Driver.c: 84: T0CONbits.T08BIT = 1;
   1638  00065A  8CD5               	bsf	4053,6,c	;volatile
   1639                           
-  1640                           ;SEG_Driver.c: 84: T0CONbits.T0CS = 0;
+  1640                           ;SEG_Driver.c: 85: T0CONbits.T0CS = 0;
   1641  00065C  9AD5               	bcf	4053,5,c	;volatile
   1642                           
-  1643                           ;SEG_Driver.c: 85: T0CONbits.PSA = 0;
+  1643                           ;SEG_Driver.c: 86: T0CONbits.PSA = 0;
   1644  00065E  96D5               	bcf	4053,3,c	;volatile
   1645                           
-  1646                           ;SEG_Driver.c: 86: T0CONbits.T0PS = 0b011;
+  1646                           ;SEG_Driver.c: 87: T0CONbits.T0PS = 0b011;
   1647  000660  50D5               	movf	4053,w,c	;volatile
   1648  000662  0BF8               	andlw	-8
   1649  000664  0903               	iorlw	3
   1650  000666  6ED5               	movwf	4053,c	;volatile
   1651                           
-  1652                           ;SEG_Driver.c: 89: RCONbits.IPEN = 1;
+  1652                           ;SEG_Driver.c: 90: RCONbits.IPEN = 1;
   1653  000668  8ED0               	bsf	4048,7,c	;volatile
   1654                           
-  1655                           ;SEG_Driver.c: 90: INTCONbits.GIEH = 1;
+  1655                           ;SEG_Driver.c: 91: INTCONbits.GIEH = 1;
   1656  00066A  8EF2               	bsf	intcon,7,c	;volatile
   1657                           
-  1658                           ;SEG_Driver.c: 91: INTCONbits.GIEL = 1;
+  1658                           ;SEG_Driver.c: 92: INTCONbits.GIEL = 1;
   1659  00066C  8CF2               	bsf	intcon,6,c	;volatile
   1660                           
-  1661                           ;SEG_Driver.c: 93: INTCONbits.TMR0IF = 0;
+  1661                           ;SEG_Driver.c: 94: INTCONbits.TMR0IF = 0;
   1662  00066E  94F2               	bcf	intcon,2,c	;volatile
   1663                           
-  1664                           ;SEG_Driver.c: 94: INTCON2bits.TMR0IP = 0;
+  1664                           ;SEG_Driver.c: 95: INTCON2bits.TMR0IP = 0;
   1665  000670  94F1               	bcf	intcon2,2,c	;volatile
   1666                           
-  1667                           ;SEG_Driver.c: 95: INTCONbits.TMR0IE = 1;
+  1667                           ;SEG_Driver.c: 96: INTCONbits.TMR0IE = 1;
   1668  000672  8AF2               	bsf	intcon,5,c	;volatile
   1669  000674  0012               	return		;funcret
   1670  000676                     __end_of_D_SEG_Init:
@@ -1689,7 +1689,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1683                           
   1684 ;; *************** function _D_SEG_Add *****************
   1685 ;; Defined at:
-  1686 ;;		line 98 in file "Drivers/SEG_Driver.c"
+  1686 ;;		line 99 in file "Drivers/SEG_Driver.c"
   1687 ;; Parameters:    Size  Location     Type
   1688 ;;  ID              1    wreg     unsigned char 
   1689 ;;  port            2   21[COMRAM] PTR volatile unsigned ch
@@ -1732,19 +1732,19 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1726                           ;D_SEG_Add@ID stored from wreg
   1727  000528  6E1A               	movwf	D_SEG_Add@ID,c
   1728                           
-  1729                           ;SEG_Driver.c: 99: if(segmentCnt < 4) {
+  1729                           ;SEG_Driver.c: 100: if(segmentCnt < 4) {
   1730  00052A  0E04               	movlw	4
   1731  00052C  6028               	cpfslt	_segmentCnt,c
   1732  00052E  0012               	return	
   1733                           
-  1734                           ;SEG_Driver.c: 100: uint8_t i;
-  1735                           ;SEG_Driver.c: 101: for(i=0; i<segmentCnt; i++) {
+  1734                           ;SEG_Driver.c: 101: uint8_t i;
+  1735                           ;SEG_Driver.c: 102: for(i=0; i<segmentCnt; i++) {
   1736  000530  0E00               	movlw	0
   1737  000532  6E1B               	movwf	D_SEG_Add@i,c
   1738  000534  D00D               	goto	l1243
   1739  000536                     l1237:
   1740                           
-  1741                           ;SEG_Driver.c: 102: if(segments[i].ID == ID) return;
+  1741                           ;SEG_Driver.c: 103: if(segments[i].ID == ID) return;
   1742  000536  501B               	movf	D_SEG_Add@i,w,c
   1743  000538  0D06               	mullw	6
   1744  00053A  0E29               	movlw	low _segments
@@ -1764,27 +1764,27 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1758  000554  A0D8               	btfss	status,0,c
   1759  000556  D7EF               	goto	l1237
   1760                           
-  1761                           ;SEG_Driver.c: 103: }
-  1762                           ;SEG_Driver.c: 105: SEG_Segment temp;
-  1763                           ;SEG_Driver.c: 106: temp.ID = segmentCnt;
+  1761                           ;SEG_Driver.c: 104: }
+  1762                           ;SEG_Driver.c: 106: SEG_Segment temp;
+  1763                           ;SEG_Driver.c: 107: temp.ID = segmentCnt;
   1764  000558  C028  F01C         	movff	_segmentCnt,D_SEG_Add@temp
   1765                           
-  1766                           ;SEG_Driver.c: 107: temp.PORT = port;
+  1766                           ;SEG_Driver.c: 108: temp.PORT = port;
   1767  00055C  C016  F01D         	movff	D_SEG_Add@port,D_SEG_Add@temp+1
   1768  000560  C017  F01E         	movff	D_SEG_Add@port+1,D_SEG_Add@temp+2
   1769                           
-  1770                           ;SEG_Driver.c: 108: temp.portBit = portPin;
+  1770                           ;SEG_Driver.c: 109: temp.portBit = portPin;
   1771  000564  C018  F01F         	movff	D_SEG_Add@portPin,D_SEG_Add@temp+3
   1772                           
-  1773                           ;SEG_Driver.c: 109: temp.value = 0;
+  1773                           ;SEG_Driver.c: 110: temp.value = 0;
   1774  000568  0E00               	movlw	0
   1775  00056A  6E20               	movwf	D_SEG_Add@temp+4,c
   1776                           
-  1777                           ;SEG_Driver.c: 110: temp.converted = 0;
+  1777                           ;SEG_Driver.c: 111: temp.converted = 0;
   1778  00056C  0E00               	movlw	0
   1779  00056E  6E21               	movwf	D_SEG_Add@temp+5,c
   1780                           
-  1781                           ;SEG_Driver.c: 111: segments[segmentCnt] = temp;
+  1781                           ;SEG_Driver.c: 112: segments[segmentCnt] = temp;
   1782  000570  EE20  F01C         	lfsr	2,D_SEG_Add@temp
   1783  000574  5028               	movf	_segmentCnt,w,c
   1784  000576  0D06               	mullw	6
@@ -1800,7 +1800,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1794  00058A  06E8               	decf	wreg,f,c
   1795  00058C  E2FC               	bc	u521
   1796                           
-  1797                           ;SEG_Driver.c: 113: segmentCnt++;
+  1797                           ;SEG_Driver.c: 114: segmentCnt++;
   1798  00058E  2A28               	incf	_segmentCnt,f,c
   1799  000590  0012               	return	
   1800  000592                     __end_of_D_SEG_Add:
@@ -1824,7 +1824,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1818                           
   1819 ;; *************** function _LowInterruptRoutine *****************
   1820 ;; Defined at:
-  1821 ;;		line 138 in file "Drivers/SEG_Driver.c"
+  1821 ;;		line 139 in file "Drivers/SEG_Driver.c"
   1822 ;; Parameters:    Size  Location     Type
   1823 ;;		None
   1824 ;; Auto vars:     Size  Location     Type
@@ -1878,11 +1878,11 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1872  000056  CFF8 F014          	movff	tblptru,??_LowInterruptRoutine+16
   1873  00005A  CFF5 F015          	movff	tablat,??_LowInterruptRoutine+17
   1874                           
-  1875                           ;SEG_Driver.c: 139: if(INTCONbits.T0IF) {
+  1875                           ;SEG_Driver.c: 140: if(INTCONbits.T0IF) {
   1876  00005E  A4F2               	btfss	intcon,2,c	;volatile
   1877  000060  D00E               	goto	i1l70
   1878                           
-  1879                           ;SEG_Driver.c: 140: PORTAbits.RA0 = !PORTAbits.RA0;
+  1879                           ;SEG_Driver.c: 141: PORTAbits.RA0 = !PORTAbits.RA0;
   1880  000062  B080               	btfsc	3968,0,c	;volatile
   1881  000064  D003               	goto	i1u32_20
   1882  000066  6A04               	clrf	??_LowInterruptRoutine& (0+255),c
@@ -1897,10 +1897,10 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1891  000074  1804               	xorwf	??_LowInterruptRoutine,w,c
   1892  000076  6E80               	movwf	3968,c	;volatile
   1893                           
-  1894                           ;SEG_Driver.c: 142: writeSegment();
+  1894                           ;SEG_Driver.c: 143: writeSegment();
   1895  000078  EC4D  F003         	call	_writeSegment	;wreg free
   1896                           
-  1897                           ;SEG_Driver.c: 143: INTCONbits.T0IF = 0;
+  1897                           ;SEG_Driver.c: 144: INTCONbits.T0IF = 0;
   1898  00007C  94F2               	bcf	intcon,2,c	;volatile
   1899  00007E                     i1l70:
   1900  00007E  C015  FFF5         	movff	??_LowInterruptRoutine+17,tablat
@@ -1951,7 +1951,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1945                           
   1946 ;; *************** function _writeSegment *****************
   1947 ;; Defined at:
-  1948 ;;		line 68 in file "Drivers/SEG_Driver.c"
+  1948 ;;		line 69 in file "Drivers/SEG_Driver.c"
   1949 ;; Parameters:    Size  Location     Type
   1950 ;;		None
   1951 ;; Auto vars:     Size  Location     Type
@@ -1985,12 +1985,12 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1979  00069A                     _writeSegment:
   1980                           	opt stack 24
   1981                           
-  1982                           ;SEG_Driver.c: 69: selectNextSegment();
+  1982                           ;SEG_Driver.c: 70: selectNextSegment();
   1983                           
   1984                           ;incstack = 0
   1985  00069A  EC21  F002         	call	_selectNextSegment	;wreg free
   1986                           
-  1987                           ;SEG_Driver.c: 70: PORTB = segments[currentSeg].converted;
+  1987                           ;SEG_Driver.c: 71: PORTB = segments[currentSeg].converted;
   1988  00069E  5025               	movf	_currentSeg,w,c
   1989  0006A0  0D06               	mullw	6
   1990  0006A2  0E05               	movlw	5
@@ -2035,7 +2035,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   2029                           
   2030 ;; *************** function _selectNextSegment *****************
   2031 ;; Defined at:
-  2032 ;;		line 32 in file "Drivers/SEG_Driver.c"
+  2032 ;;		line 33 in file "Drivers/SEG_Driver.c"
   2033 ;; Parameters:    Size  Location     Type
   2034 ;;		None
   2035 ;; Auto vars:     Size  Location     Type
@@ -2068,36 +2068,36 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   2062  000442                     _selectNextSegment:
   2063                           	opt stack 24
   2064                           
-  2065                           ;SEG_Driver.c: 33: if(segmentCnt > 0) {
+  2065                           ;SEG_Driver.c: 34: if(segmentCnt > 0) {
   2066                           
   2067                           ;incstack = 0
   2068  000442  5028               	movf	_segmentCnt,w,c
   2069  000444  B4D8               	btfsc	status,2,c
   2070  000446  0012               	return	
   2071                           
-  2072                           ;SEG_Driver.c: 37: if(currentSeg == segmentCnt) {
+  2072                           ;SEG_Driver.c: 38: if(currentSeg == segmentCnt) {
   2073  000448  5028               	movf	_segmentCnt,w,c
   2074  00044A  1825               	xorwf	_currentSeg,w,c
   2075  00044C  A4D8               	btfss	status,2,c
   2076  00044E  D003               	goto	i1l905
   2077                           
-  2078                           ;SEG_Driver.c: 38: currentSeg = 0;
+  2078                           ;SEG_Driver.c: 39: currentSeg = 0;
   2079  000450  0E00               	movlw	0
   2080  000452  6E25               	movwf	_currentSeg,c
   2081                           
-  2082                           ;SEG_Driver.c: 39: } else {
+  2082                           ;SEG_Driver.c: 40: } else {
   2083  000454  D001               	goto	i1l907
   2084  000456                     i1l905:
   2085                           
-  2086                           ;SEG_Driver.c: 40: currentSeg++;
+  2086                           ;SEG_Driver.c: 41: currentSeg++;
   2087  000456  2A25               	incf	_currentSeg,f,c
   2088  000458                     i1l907:
   2089                           
-  2090                           ;SEG_Driver.c: 41: }
-  2091                           ;SEG_Driver.c: 42: uint8_t select = 0xFF;
+  2090                           ;SEG_Driver.c: 42: }
+  2091                           ;SEG_Driver.c: 43: uint8_t select = 0xFF;
   2092  000458  6803               	setf	selectNextSegment@select,c
   2093                           
-  2094                           ;SEG_Driver.c: 43: select &= (1 << segments[currentSeg].portBit);
+  2094                           ;SEG_Driver.c: 44: select &= (1 << segments[currentSeg].portBit);
   2095  00045A  5025               	movf	_currentSeg,w,c
   2096  00045C  0D06               	mullw	6
   2097  00045E  0E03               	movlw	3
@@ -2125,7 +2125,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   2119  000486  5002               	movf	??_selectNextSegment+1,w,c
   2120  000488  1603               	andwf	selectNextSegment@select,f,c
   2121                           
-  2122                           ;SEG_Driver.c: 44: *segments[currentSeg].PORT = select;
+  2122                           ;SEG_Driver.c: 45: *segments[currentSeg].PORT = select;
   2123  00048A  5025               	movf	_currentSeg,w,c
   2124  00048C  0D06               	mullw	6
   2125  00048E  0E01               	movlw	1
@@ -2503,7 +2503,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.37 build -260352376 
-Symbol Table                                                                                   Sat Nov 19 12:24:08 2016
+Symbol Table                                                                                   Sat Nov 19 13:04:43 2016
 
                             l27 00D0      __size_of_selectNextSegment 0076                    ___awdiv@sign 001B  
                    __CFG_BOR$ON 000000                              bsr 000FE0                     __CFG_BORV$3 000000  

@@ -177,11 +177,11 @@ void setSegments(uint8_t player, uint8_t value) {
 }
 
 uint8_t determineWinner() {
-    if (score_1 >= 10) {
+    if (score_1 > 10) {
         if (score_1 > (score_2+2)) return PLAYER_1;
     }
     
-    if (score_2 >= 10) {
+    if (score_2 > 10) {
         if (score_2 > (score_1+2)) return PLAYER_2;
     }
     

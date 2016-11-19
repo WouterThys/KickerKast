@@ -27,21 +27,21 @@
 [v ___flmul __flmul `(d  1 e 3 0 ]
 "15 /opt/microchip/xc8/v1.37/sources/common/Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"32 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
+"33 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
 [v _selectNextSegment selectNextSegment `(v  1 e 1 0 ]
-"48
+"49
 [v _convertValueToSegment convertValueToSegment `(v  1 e 1 0 ]
-"68
+"69
 [v _writeSegment writeSegment `(v  1 e 1 0 ]
-"76
+"77
 [v _D_SEG_Init D_SEG_Init `(v  1 e 1 0 ]
-"98
+"99
 [v _D_SEG_Add D_SEG_Add `(v  1 e 1 0 ]
-"117
+"118
 [v _D_SEG_Start D_SEG_Start `(v  1 e 1 0 ]
-"131
+"132
 [v _D_SEG_Update D_SEG_Update `(v  1 e 1 0 ]
-"138
+"139
 [v _LowInterruptRoutine LowInterruptRoutine `IIL(v  1 e 1 0 ]
 "48 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Main.c
 [v _main main `(v  1 e 1 0 ]
@@ -225,11 +225,11 @@
 [u S154 . 1 `S132 1 . 1 0 `S141 1 . 1 0 `S150 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES154  1 e 1 @4082 ]
 [s S21 . 6 `uc 1 ID 1 0 `*.39VEuc 1 PORT 2 1 `uc 1 portBit 1 3 `uc 1 value 1 4 `uc 1 converted 1 5 ]
-"21 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
+"22 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
 [v _segments segments `[4]S21  1 e 24 0 ]
-"22
-[v _segmentCnt segmentCnt `uc  1 e 1 0 ]
 "23
+[v _segmentCnt segmentCnt `uc  1 e 1 0 ]
+"24
 [v _currentSeg currentSeg `uc  1 e 1 0 ]
 "44 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Main.c
 [v _score_1 score_1 `uc  1 e 1 0 ]
@@ -282,23 +282,23 @@
 [v ___awdiv@divisor divisor `i  1 p 2 23 ]
 "42
 } 0
-"131 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
+"132 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
 [v _D_SEG_Update D_SEG_Update `(v  1 e 1 0 ]
 {
 [v D_SEG_Update@which which `uc  1 a 1 wreg ]
 [v D_SEG_Update@which which `uc  1 a 1 wreg ]
 [v D_SEG_Update@value value `uc  1 p 1 29 ]
-"133
+"134
 [v D_SEG_Update@which which `uc  1 a 1 30 ]
-"136
+"137
 } 0
-"48
+"49
 [v _convertValueToSegment convertValueToSegment `(v  1 e 1 0 ]
 {
 [s S21 . 6 `uc 1 ID 1 0 `*.39VEuc 1 PORT 2 1 `uc 1 portBit 1 3 `uc 1 value 1 4 `uc 1 converted 1 5 ]
 [v convertValueToSegment@segment segment `*.39S21  1 p 2 21 ]
 [v convertValueToSegment@data data `uc  1 p 1 23 ]
-"66
+"67
 } 0
 "179 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Main.c
 [v _determineWinner determineWinner `(uc  1 e 1 0 ]
@@ -319,46 +319,46 @@
 [v delay@ms ms `ui  1 p 2 21 ]
 "197
 } 0
-"117 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
+"118 /home/wouter/Documents/geeken/software/mplab/KICKERKAST/KickerKast.X/Drivers/SEG_Driver.c
 [v _D_SEG_Start D_SEG_Start `(v  1 e 1 0 ]
 {
-"123
+"124
 } 0
-"76
+"77
 [v _D_SEG_Init D_SEG_Init `(v  1 e 1 0 ]
 {
-"96
+"97
 } 0
-"98
+"99
 [v _D_SEG_Add D_SEG_Add `(v  1 e 1 0 ]
 {
 [v D_SEG_Add@ID ID `uc  1 a 1 wreg ]
 [s S21 . 6 `uc 1 ID 1 0 `*.39VEuc 1 PORT 2 1 `uc 1 portBit 1 3 `uc 1 value 1 4 `uc 1 converted 1 5 ]
-"105
+"106
 [v D_SEG_Add@temp temp `S21  1 a 6 27 ]
-"100
+"101
 [v D_SEG_Add@i i `uc  1 a 1 26 ]
-"98
+"99
 [v D_SEG_Add@ID ID `uc  1 a 1 wreg ]
 [v D_SEG_Add@port port `*.39VEuc  1 p 2 21 ]
 [v D_SEG_Add@portPin portPin `uc  1 p 1 23 ]
 [v D_SEG_Add@ID ID `uc  1 a 1 25 ]
-"115
+"116
 } 0
-"138
+"139
 [v _LowInterruptRoutine LowInterruptRoutine `IIL(v  1 e 1 0 ]
 {
-"145
+"146
 } 0
-"68
+"69
 [v _writeSegment writeSegment `(v  1 e 1 0 ]
 {
-"71
+"72
 } 0
-"32
+"33
 [v _selectNextSegment selectNextSegment `(v  1 e 1 0 ]
 {
-"42
+"43
 [v selectNextSegment@select select `uc  1 a 1 2 ]
-"46
+"47
 } 0

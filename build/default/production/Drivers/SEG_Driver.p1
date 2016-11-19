@@ -3693,148 +3693,148 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;SEG_Driver.h: 69: void D_SEG_Start();
 [; ;SEG_Driver.h: 74: void D_SEG_Stop();
 [; ;SEG_Driver.h: 82: void D_SEG_Update(uint8_t which, uint8_t value);
-"21 Drivers/SEG_Driver.c
+"22 Drivers/SEG_Driver.c
 [v _segments `S468 ~T0 @X0 -> 4 `i e ]
-[; ;SEG_Driver.c: 21: SEG_Segment segments[4];
-"22
-[v _segmentCnt `uc ~T0 @X0 1 e ]
-[; ;SEG_Driver.c: 22: uint8_t segmentCnt;
+[; ;SEG_Driver.c: 22: SEG_Segment segments[4];
 "23
+[v _segmentCnt `uc ~T0 @X0 1 e ]
+[; ;SEG_Driver.c: 23: uint8_t segmentCnt;
+"24
 [v _currentSeg `uc ~T0 @X0 1 e ]
-[; ;SEG_Driver.c: 23: uint8_t currentSeg;
-[; ;SEG_Driver.c: 28: void selectNextSegment();
-[; ;SEG_Driver.c: 29: void writeSegment();
-[; ;SEG_Driver.c: 30: void convertValueToSegment(SEG_Segment *segment, uint8_t data);
-"32
+[; ;SEG_Driver.c: 24: uint8_t currentSeg;
+[; ;SEG_Driver.c: 29: void selectNextSegment();
+[; ;SEG_Driver.c: 30: void writeSegment();
+[; ;SEG_Driver.c: 31: void convertValueToSegment(SEG_Segment *segment, uint8_t data);
+"33
 [v _selectNextSegment `(v ~T0 @X0 1 ef ]
 {
-[; ;SEG_Driver.c: 32: void selectNextSegment() {
+[; ;SEG_Driver.c: 33: void selectNextSegment() {
 [e :U _selectNextSegment ]
 [f ]
-[; ;SEG_Driver.c: 33: if(segmentCnt > 0) {
-"33
+[; ;SEG_Driver.c: 34: if(segmentCnt > 0) {
+"34
 [e $ ! > -> _segmentCnt `i -> 0 `i 470  ]
 {
-[; ;SEG_Driver.c: 37: if(currentSeg == segmentCnt) {
-"37
+[; ;SEG_Driver.c: 38: if(currentSeg == segmentCnt) {
+"38
 [e $ ! == -> _currentSeg `i -> _segmentCnt `i 471  ]
 {
-[; ;SEG_Driver.c: 38: currentSeg = 0;
-"38
-[e = _currentSeg -> -> 0 `i `uc ]
+[; ;SEG_Driver.c: 39: currentSeg = 0;
 "39
+[e = _currentSeg -> -> 0 `i `uc ]
+"40
 }
-[; ;SEG_Driver.c: 39: } else {
+[; ;SEG_Driver.c: 40: } else {
 [e $U 472  ]
 [e :U 471 ]
 {
-[; ;SEG_Driver.c: 40: currentSeg++;
-"40
-[e ++ _currentSeg -> -> 1 `i `uc ]
+[; ;SEG_Driver.c: 41: currentSeg++;
 "41
+[e ++ _currentSeg -> -> 1 `i `uc ]
+"42
 }
 [e :U 472 ]
-"42
-[v _select `uc ~T0 @X0 1 a ]
-[; ;SEG_Driver.c: 41: }
-[; ;SEG_Driver.c: 42: uint8_t select = 0xFF;
-[e = _select -> -> 255 `i `uc ]
-[; ;SEG_Driver.c: 43: select &= (1 << segments[currentSeg].portBit);
 "43
-[e =& _select -> << -> 1 `i . *U + &U _segments * -> _currentSeg `ux -> -> # *U &U _segments `ui `ux 2 `uc ]
-[; ;SEG_Driver.c: 44: *segments[currentSeg].PORT = select;
+[v _select `uc ~T0 @X0 1 a ]
+[; ;SEG_Driver.c: 42: }
+[; ;SEG_Driver.c: 43: uint8_t select = 0xFF;
+[e = _select -> -> 255 `i `uc ]
+[; ;SEG_Driver.c: 44: select &= (1 << segments[currentSeg].portBit);
 "44
-[e = *U . *U + &U _segments * -> _currentSeg `ux -> -> # *U &U _segments `ui `ux 1 _select ]
+[e =& _select -> << -> 1 `i . *U + &U _segments * -> _currentSeg `ux -> -> # *U &U _segments `ui `ux 2 `uc ]
+[; ;SEG_Driver.c: 45: *segments[currentSeg].PORT = select;
 "45
+[e = *U . *U + &U _segments * -> _currentSeg `ux -> -> # *U &U _segments `ui `ux 1 _select ]
+"46
 }
 [e :U 470 ]
-[; ;SEG_Driver.c: 45: }
 [; ;SEG_Driver.c: 46: }
-"46
+[; ;SEG_Driver.c: 47: }
+"47
 [e :UE 469 ]
 }
-"48
+"49
 [v _convertValueToSegment `(v ~T0 @X0 1 ef2`*S468`uc ]
 {
-[; ;SEG_Driver.c: 48: void convertValueToSegment(SEG_Segment *segment, uint8_t data) {
+[; ;SEG_Driver.c: 49: void convertValueToSegment(SEG_Segment *segment, uint8_t data) {
 [e :U _convertValueToSegment ]
 [v _segment `*S468 ~T0 @X0 1 r1 ]
 [v _data `uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;SEG_Driver.c: 50: while(data >= 10) {
-"50
+[; ;SEG_Driver.c: 51: while(data >= 10) {
+"51
 [e $U 474  ]
 [e :U 475 ]
 {
-[; ;SEG_Driver.c: 51: data -= 10;
-"51
-[e =- _data -> -> 10 `i `uc ]
+[; ;SEG_Driver.c: 52: data -= 10;
 "52
+[e =- _data -> -> 10 `i `uc ]
+"53
 }
 [e :U 474 ]
-"50
+"51
 [e $ >= -> _data `i -> 10 `i 475  ]
 [e :U 476 ]
-[; ;SEG_Driver.c: 52: }
-[; ;SEG_Driver.c: 54: switch(data) {
-"54
+[; ;SEG_Driver.c: 53: }
+[; ;SEG_Driver.c: 55: switch(data) {
+"55
 [e $U 478  ]
 {
-[; ;SEG_Driver.c: 55: case 0: segment -> converted = 0b00111111; break;
-"55
-[e :U 479 ]
-[e = . *U _segment 4 -> -> 63 `i `uc ]
-[e $U 477  ]
-[; ;SEG_Driver.c: 56: case 1: segment -> converted = 0b00000110; break;
+[; ;SEG_Driver.c: 56: case 0: segment -> converted = 0b01110111; break;
 "56
-[e :U 480 ]
-[e = . *U _segment 4 -> -> 6 `i `uc ]
+[e :U 479 ]
+[e = . *U _segment 4 -> -> 119 `i `uc ]
 [e $U 477  ]
-[; ;SEG_Driver.c: 57: case 2: segment -> converted = 0b01011011; break;
+[; ;SEG_Driver.c: 57: case 1: segment -> converted = 0b01000001; break;
 "57
-[e :U 481 ]
-[e = . *U _segment 4 -> -> 91 `i `uc ]
+[e :U 480 ]
+[e = . *U _segment 4 -> -> 65 `i `uc ]
 [e $U 477  ]
-[; ;SEG_Driver.c: 58: case 3: segment -> converted = 0b01001111; break;
+[; ;SEG_Driver.c: 58: case 2: segment -> converted = 0b00111011; break;
 "58
-[e :U 482 ]
-[e = . *U _segment 4 -> -> 79 `i `uc ]
+[e :U 481 ]
+[e = . *U _segment 4 -> -> 59 `i `uc ]
 [e $U 477  ]
-[; ;SEG_Driver.c: 59: case 4: segment -> converted = 0b01100110; break;
+[; ;SEG_Driver.c: 59: case 3: segment -> converted = 0b01101011; break;
 "59
-[e :U 483 ]
-[e = . *U _segment 4 -> -> 102 `i `uc ]
+[e :U 482 ]
+[e = . *U _segment 4 -> -> 107 `i `uc ]
 [e $U 477  ]
-[; ;SEG_Driver.c: 60: case 5: segment -> converted = 0b01101101; break;
+[; ;SEG_Driver.c: 60: case 4: segment -> converted = 0b01001101; break;
 "60
-[e :U 484 ]
-[e = . *U _segment 4 -> -> 109 `i `uc ]
+[e :U 483 ]
+[e = . *U _segment 4 -> -> 77 `i `uc ]
 [e $U 477  ]
-[; ;SEG_Driver.c: 61: case 6: segment -> converted = 0b01111101; break;
+[; ;SEG_Driver.c: 61: case 5: segment -> converted = 0b01101110; break;
 "61
-[e :U 485 ]
-[e = . *U _segment 4 -> -> 125 `i `uc ]
+[e :U 484 ]
+[e = . *U _segment 4 -> -> 110 `i `uc ]
 [e $U 477  ]
-[; ;SEG_Driver.c: 62: case 7: segment -> converted = 0b00000111; break;
+[; ;SEG_Driver.c: 62: case 6: segment -> converted = 0b01111110; break;
 "62
-[e :U 486 ]
-[e = . *U _segment 4 -> -> 7 `i `uc ]
+[e :U 485 ]
+[e = . *U _segment 4 -> -> 126 `i `uc ]
 [e $U 477  ]
-[; ;SEG_Driver.c: 63: case 8: segment -> converted = 0b01111111; break;
+[; ;SEG_Driver.c: 63: case 7: segment -> converted = 0b01000011; break;
 "63
+[e :U 486 ]
+[e = . *U _segment 4 -> -> 67 `i `uc ]
+[e $U 477  ]
+[; ;SEG_Driver.c: 64: case 8: segment -> converted = 0b01111111; break;
+"64
 [e :U 487 ]
 [e = . *U _segment 4 -> -> 127 `i `uc ]
 [e $U 477  ]
-[; ;SEG_Driver.c: 64: case 9: segment -> converted = 0b01101111; break;
-"64
+[; ;SEG_Driver.c: 65: case 9: segment -> converted = 0b01101111; break;
+"65
 [e :U 488 ]
 [e = . *U _segment 4 -> -> 111 `i `uc ]
 [e $U 477  ]
-"65
+"66
 }
-[; ;SEG_Driver.c: 65: }
+[; ;SEG_Driver.c: 66: }
 [e $U 477  ]
-"54
+"55
 [e :U 478 ]
 [e [\ _data , $ -> -> 0 `i `uc 479
  , $ -> -> 1 `i `uc 480
@@ -3847,221 +3847,221 @@ Version 3.2 HI-TECH Software Intermediate Code
  , $ -> -> 8 `i `uc 487
  , $ -> -> 9 `i `uc 488
  477 ]
-"65
-[e :U 477 ]
-[; ;SEG_Driver.c: 66: }
 "66
+[e :U 477 ]
+[; ;SEG_Driver.c: 67: }
+"67
 [e :UE 473 ]
 }
-"68
+"69
 [v _writeSegment `(v ~T0 @X0 1 ef ]
 {
-[; ;SEG_Driver.c: 68: void writeSegment() {
+[; ;SEG_Driver.c: 69: void writeSegment() {
 [e :U _writeSegment ]
 [f ]
-[; ;SEG_Driver.c: 69: selectNextSegment();
-"69
-[e ( _selectNextSegment ..  ]
-[; ;SEG_Driver.c: 70: PORTB = segments[currentSeg].converted;
+[; ;SEG_Driver.c: 70: selectNextSegment();
 "70
-[e = _PORTB . *U + &U _segments * -> _currentSeg `ux -> -> # *U &U _segments `ui `ux 4 ]
-[; ;SEG_Driver.c: 71: }
+[e ( _selectNextSegment ..  ]
+[; ;SEG_Driver.c: 71: PORTB = segments[currentSeg].converted;
 "71
+[e = _PORTB . *U + &U _segments * -> _currentSeg `ux -> -> # *U &U _segments `ui `ux 4 ]
+[; ;SEG_Driver.c: 72: }
+"72
 [e :UE 489 ]
 }
-"76
+"77
 [v _D_SEG_Init `(v ~T0 @X0 1 ef ]
 {
-[; ;SEG_Driver.c: 76: void D_SEG_Init() {
+[; ;SEG_Driver.c: 77: void D_SEG_Init() {
 [e :U _D_SEG_Init ]
 [f ]
-[; ;SEG_Driver.c: 78: segmentCnt = 0;
-"78
-[e = _segmentCnt -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 79: currentSeg = 0;
+[; ;SEG_Driver.c: 79: segmentCnt = 0;
 "79
+[e = _segmentCnt -> -> 0 `i `uc ]
+[; ;SEG_Driver.c: 80: currentSeg = 0;
+"80
 [e = _currentSeg -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 82: T0CONbits.TMR0ON = 0;
-"82
-[e = . . _T0CONbits 0 5 -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 83: T0CONbits.T08BIT = 1;
+[; ;SEG_Driver.c: 83: T0CONbits.TMR0ON = 0;
 "83
-[e = . . _T0CONbits 0 4 -> -> 1 `i `uc ]
-[; ;SEG_Driver.c: 84: T0CONbits.T0CS = 0;
+[e = . . _T0CONbits 0 5 -> -> 0 `i `uc ]
+[; ;SEG_Driver.c: 84: T0CONbits.T08BIT = 1;
 "84
-[e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 85: T0CONbits.PSA = 0;
+[e = . . _T0CONbits 0 4 -> -> 1 `i `uc ]
+[; ;SEG_Driver.c: 85: T0CONbits.T0CS = 0;
 "85
-[e = . . _T0CONbits 0 1 -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 86: T0CONbits.T0PS = 0b011;
+[e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
+[; ;SEG_Driver.c: 86: T0CONbits.PSA = 0;
 "86
+[e = . . _T0CONbits 0 1 -> -> 0 `i `uc ]
+[; ;SEG_Driver.c: 87: T0CONbits.T0PS = 0b011;
+"87
 [e = . . _T0CONbits 0 0 -> -> 3 `i `uc ]
-[; ;SEG_Driver.c: 89: RCONbits.IPEN = 1;
-"89
-[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
-[; ;SEG_Driver.c: 90: INTCONbits.GIEH = 1;
+[; ;SEG_Driver.c: 90: RCONbits.IPEN = 1;
 "90
-[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
-[; ;SEG_Driver.c: 91: INTCONbits.GIEL = 1;
+[e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
+[; ;SEG_Driver.c: 91: INTCONbits.GIEH = 1;
 "91
+[e = . . _INTCONbits 2 2 -> -> 1 `i `uc ]
+[; ;SEG_Driver.c: 92: INTCONbits.GIEL = 1;
+"92
 [e = . . _INTCONbits 2 1 -> -> 1 `i `uc ]
-[; ;SEG_Driver.c: 93: INTCONbits.TMR0IF = 0;
-"93
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 94: INTCON2bits.TMR0IP = 0;
+[; ;SEG_Driver.c: 94: INTCONbits.TMR0IF = 0;
 "94
-[e = . . _INTCON2bits 1 2 -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 95: INTCONbits.TMR0IE = 1;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;SEG_Driver.c: 95: INTCON2bits.TMR0IP = 0;
 "95
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;SEG_Driver.c: 96: }
+[e = . . _INTCON2bits 1 2 -> -> 0 `i `uc ]
+[; ;SEG_Driver.c: 96: INTCONbits.TMR0IE = 1;
 "96
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+[; ;SEG_Driver.c: 97: }
+"97
 [e :UE 490 ]
 }
-"98
+"99
 [v _D_SEG_Add `(v ~T0 @X0 1 ef3`uc`*Vuc`uc ]
 {
-[; ;SEG_Driver.c: 98: void D_SEG_Add(uint8_t ID, volatile char *port, uint8_t portPin) {
+[; ;SEG_Driver.c: 99: void D_SEG_Add(uint8_t ID, volatile char *port, uint8_t portPin) {
 [e :U _D_SEG_Add ]
 [v _ID `uc ~T0 @X0 1 r1 ]
 [v _port `*Vuc ~T0 @X0 1 r2 ]
 [v _portPin `uc ~T0 @X0 1 r3 ]
 [f ]
-[; ;SEG_Driver.c: 99: if(segmentCnt < 4) {
-"99
+[; ;SEG_Driver.c: 100: if(segmentCnt < 4) {
+"100
 [e $ ! < -> _segmentCnt `i -> 4 `i 492  ]
 {
-"100
-[v _i `uc ~T0 @X0 1 a ]
-[; ;SEG_Driver.c: 100: uint8_t i;
-[; ;SEG_Driver.c: 101: for(i=0; i<segmentCnt; i++) {
 "101
+[v _i `uc ~T0 @X0 1 a ]
+[; ;SEG_Driver.c: 101: uint8_t i;
+[; ;SEG_Driver.c: 102: for(i=0; i<segmentCnt; i++) {
+"102
 {
 [e = _i -> -> 0 `i `uc ]
 [e $U 496  ]
 [e :U 493 ]
 {
-[; ;SEG_Driver.c: 102: if(segments[i].ID == ID) return;
-"102
+[; ;SEG_Driver.c: 103: if(segments[i].ID == ID) return;
+"103
 [e $ ! == -> . *U + &U _segments * -> _i `ux -> -> # *U &U _segments `ui `ux 0 `i -> _ID `i 497  ]
 [e $UE 491  ]
 [e :U 497 ]
-"103
+"104
 }
-"101
+"102
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 496 ]
 [e $ < -> _i `i -> _segmentCnt `i 493  ]
 [e :U 494 ]
-"103
+"104
 }
-"105
-[v _temp `S468 ~T0 @X0 1 a ]
-[; ;SEG_Driver.c: 103: }
-[; ;SEG_Driver.c: 105: SEG_Segment temp;
-[; ;SEG_Driver.c: 106: temp.ID = segmentCnt;
 "106
-[e = . _temp 0 _segmentCnt ]
-[; ;SEG_Driver.c: 107: temp.PORT = port;
+[v _temp `S468 ~T0 @X0 1 a ]
+[; ;SEG_Driver.c: 104: }
+[; ;SEG_Driver.c: 106: SEG_Segment temp;
+[; ;SEG_Driver.c: 107: temp.ID = segmentCnt;
 "107
-[e = . _temp 1 _port ]
-[; ;SEG_Driver.c: 108: temp.portBit = portPin;
+[e = . _temp 0 _segmentCnt ]
+[; ;SEG_Driver.c: 108: temp.PORT = port;
 "108
-[e = . _temp 2 _portPin ]
-[; ;SEG_Driver.c: 109: temp.value = 0;
+[e = . _temp 1 _port ]
+[; ;SEG_Driver.c: 109: temp.portBit = portPin;
 "109
-[e = . _temp 3 -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 110: temp.converted = 0;
+[e = . _temp 2 _portPin ]
+[; ;SEG_Driver.c: 110: temp.value = 0;
 "110
-[e = . _temp 4 -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 111: segments[segmentCnt] = temp;
+[e = . _temp 3 -> -> 0 `i `uc ]
+[; ;SEG_Driver.c: 111: temp.converted = 0;
 "111
+[e = . _temp 4 -> -> 0 `i `uc ]
+[; ;SEG_Driver.c: 112: segments[segmentCnt] = temp;
+"112
 [e = *U + &U _segments * -> _segmentCnt `ux -> -> # *U &U _segments `ui `ux _temp ]
-[; ;SEG_Driver.c: 113: segmentCnt++;
-"113
-[e ++ _segmentCnt -> -> 1 `i `uc ]
+[; ;SEG_Driver.c: 114: segmentCnt++;
 "114
+[e ++ _segmentCnt -> -> 1 `i `uc ]
+"115
 }
 [e :U 492 ]
-[; ;SEG_Driver.c: 114: }
 [; ;SEG_Driver.c: 115: }
-"115
+[; ;SEG_Driver.c: 116: }
+"116
 [e :UE 491 ]
 }
-"117
+"118
 [v _D_SEG_Start `(v ~T0 @X0 1 ef ]
 {
-[; ;SEG_Driver.c: 117: void D_SEG_Start() {
+[; ;SEG_Driver.c: 118: void D_SEG_Start() {
 [e :U _D_SEG_Start ]
 [f ]
-[; ;SEG_Driver.c: 119: T0CONbits.TMR0ON = 1;
-"119
+[; ;SEG_Driver.c: 120: T0CONbits.TMR0ON = 1;
+"120
 [e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-[; ;SEG_Driver.c: 123: }
-"123
+[; ;SEG_Driver.c: 124: }
+"124
 [e :UE 498 ]
 }
-"125
+"126
 [v _D_SEG_Stop `(v ~T0 @X0 1 ef ]
 {
-[; ;SEG_Driver.c: 125: void D_SEG_Stop() {
+[; ;SEG_Driver.c: 126: void D_SEG_Stop() {
 [e :U _D_SEG_Stop ]
 [f ]
-[; ;SEG_Driver.c: 127: T0CONbits.TMR0ON = 0;
-"127
+[; ;SEG_Driver.c: 128: T0CONbits.TMR0ON = 0;
+"128
 [e = . . _T0CONbits 0 5 -> -> 0 `i `uc ]
-[; ;SEG_Driver.c: 129: }
-"129
+[; ;SEG_Driver.c: 130: }
+"130
 [e :UE 499 ]
 }
-"131
+"132
 [v _D_SEG_Update `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[; ;SEG_Driver.c: 131: void D_SEG_Update(uint8_t which, uint8_t value) {
+[; ;SEG_Driver.c: 132: void D_SEG_Update(uint8_t which, uint8_t value) {
 [e :U _D_SEG_Update ]
 [v _which `uc ~T0 @X0 1 r1 ]
 [v _value `uc ~T0 @X0 1 r2 ]
 [f ]
-[; ;SEG_Driver.c: 133: if(which < segmentCnt) {
-"133
+[; ;SEG_Driver.c: 134: if(which < segmentCnt) {
+"134
 [e $ ! < -> _which `i -> _segmentCnt `i 501  ]
 {
-[; ;SEG_Driver.c: 134: convertValueToSegment(&segments[which], value);
-"134
-[e ( _convertValueToSegment (2 , &U *U + &U _segments * -> _which `ux -> -> # *U &U _segments `ui `ux _value ]
+[; ;SEG_Driver.c: 135: convertValueToSegment(&segments[which], value);
 "135
+[e ( _convertValueToSegment (2 , &U *U + &U _segments * -> _which `ux -> -> # *U &U _segments `ui `ux _value ]
+"136
 }
 [e :U 501 ]
-[; ;SEG_Driver.c: 135: }
 [; ;SEG_Driver.c: 136: }
-"136
+[; ;SEG_Driver.c: 137: }
+"137
 [e :UE 500 ]
 }
 [v F3870 `(v ~T0 @X0 1 tf ]
-"138
+"139
 [v _LowInterruptRoutine `ILF3870 ~T0 @X0 1 e ]
 {
-[; ;SEG_Driver.c: 138: void low_priority interrupt LowInterruptRoutine(void) {
+[; ;SEG_Driver.c: 139: void low_priority interrupt LowInterruptRoutine(void) {
 [e :U _LowInterruptRoutine ]
 [f ]
-[; ;SEG_Driver.c: 139: if(INTCONbits.T0IF) {
-"139
+[; ;SEG_Driver.c: 140: if(INTCONbits.T0IF) {
+"140
 [e $ ! != -> . . _INTCONbits 1 2 `i -> -> -> 0 `i `Vuc `i 503  ]
 {
-[; ;SEG_Driver.c: 140: PORTAbits.RA0 = !PORTAbits.RA0;
-"140
+[; ;SEG_Driver.c: 141: PORTAbits.RA0 = !PORTAbits.RA0;
+"141
 [e = . . _PORTAbits 0 0 -> -> ! != -> . . _PORTAbits 0 0 `i -> -> -> 0 `i `Vuc `i `i `uc ]
-[; ;SEG_Driver.c: 142: writeSegment();
-"142
-[e ( _writeSegment ..  ]
-[; ;SEG_Driver.c: 143: INTCONbits.T0IF = 0;
+[; ;SEG_Driver.c: 143: writeSegment();
 "143
-[e = . . _INTCONbits 1 2 -> -> 0 `i `uc ]
+[e ( _writeSegment ..  ]
+[; ;SEG_Driver.c: 144: INTCONbits.T0IF = 0;
 "144
+[e = . . _INTCONbits 1 2 -> -> 0 `i `uc ]
+"145
 }
 [e :U 503 ]
-[; ;SEG_Driver.c: 144: }
 [; ;SEG_Driver.c: 145: }
-"145
+[; ;SEG_Driver.c: 146: }
+"146
 [e :UE 502 ]
 }

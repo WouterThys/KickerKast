@@ -4066,9 +4066,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main.c: 179: uint8_t determineWinner() {
 [e :U _determineWinner ]
 [f ]
-[; ;Main.c: 180: if (score_1 >= 10) {
+[; ;Main.c: 180: if (score_1 > 10) {
 "180
-[e $ ! >= -> _score_1 `i -> 10 `i 511  ]
+[e $ ! > -> _score_1 `i -> 10 `i 511  ]
 {
 [; ;Main.c: 181: if (score_1 > (score_2+2)) return 0x01;
 "181
@@ -4080,9 +4080,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 }
 [e :U 511 ]
 [; ;Main.c: 182: }
-[; ;Main.c: 184: if (score_2 >= 10) {
+[; ;Main.c: 184: if (score_2 > 10) {
 "184
-[e $ ! >= -> _score_2 `i -> 10 `i 513  ]
+[e $ ! > -> _score_2 `i -> 10 `i 513  ]
 {
 [; ;Main.c: 185: if (score_2 > (score_1+2)) return 0x02;
 "185

@@ -4803,12 +4803,12 @@ void D_SEG_Stop();
 # 82
 void D_SEG_Update(uint8_t which, uint8_t value);
 
-# 21 "Drivers/SEG_Driver.c"
+# 22 "Drivers/SEG_Driver.c"
 SEG_Segment segments[4];
 uint8_t segmentCnt;
 uint8_t currentSeg;
 
-# 28
+# 29
 void selectNextSegment();
 void writeSegment();
 void convertValueToSegment(SEG_Segment *segment, uint8_t data);
@@ -4836,14 +4836,14 @@ data -= 10;
 }
 
 switch(data) {
-case 0: segment -> converted = 0b00111111; break;
-case 1: segment -> converted = 0b00000110; break;
-case 2: segment -> converted = 0b01011011; break;
-case 3: segment -> converted = 0b01001111; break;
-case 4: segment -> converted = 0b01100110; break;
-case 5: segment -> converted = 0b01101101; break;
-case 6: segment -> converted = 0b01111101; break;
-case 7: segment -> converted = 0b00000111; break;
+case 0: segment -> converted = 0b01110111; break;
+case 1: segment -> converted = 0b01000001; break;
+case 2: segment -> converted = 0b00111011; break;
+case 3: segment -> converted = 0b01101011; break;
+case 4: segment -> converted = 0b01001101; break;
+case 5: segment -> converted = 0b01101110; break;
+case 6: segment -> converted = 0b01111110; break;
+case 7: segment -> converted = 0b01000011; break;
 case 8: segment -> converted = 0b01111111; break;
 case 9: segment -> converted = 0b01101111; break;
 }
@@ -4854,7 +4854,7 @@ selectNextSegment();
 PORTB = segments[currentSeg].converted;
 }
 
-# 76
+# 77
 void D_SEG_Init() {
 
 segmentCnt = 0;

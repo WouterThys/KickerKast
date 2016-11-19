@@ -4883,11 +4883,11 @@ default: break;
 }
 
 uint8_t determineWinner() {
-if (score_1 >= 10) {
+if (score_1 > 10) {
 if (score_1 > (score_2+2)) return 0x01;
 }
 
-if (score_2 >= 10) {
+if (score_2 > 10) {
 if (score_2 > (score_1+2)) return 0x02;
 }
 
