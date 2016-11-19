@@ -4121,9 +4121,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Main.c: 194: ms--;
 "194
 [e -- _ms -> -> 1 `i `ui ]
-[; ;Main.c: 195: _delay((unsigned long)((1)*(10000000/4000.0)));
+[; ;Main.c: 195: _delay((unsigned long)((1)*(16000000/4000.0)));
 "195
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 10000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "196
 }
 [e :U 516 ]

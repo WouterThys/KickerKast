@@ -4898,6 +4898,6 @@ void delay(uint16_t ms) {
 uint16_t i = 0;
 while(ms > 0) {
 ms--;
-_delay((unsigned long)((1)*(10000000/4000.0)));
+_delay((unsigned long)((1)*(16000000/4000.0)));
 }
 }

@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.37 build -260352376 
-                                                                                               Mon Oct  3 21:03:00 2016
+                                                                                               Sat Nov 19 12:24:08 2016
 
 Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110536
      1                           	processor	18F2550
@@ -46,30 +46,30 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
     40                           ; #config settings
     41  0000                     
     42                           	psect	cinit
-    43  0006BA                     __pcinit:
+    43  0006BC                     __pcinit:
     44                           	opt stack 0
-    45  0006BA                     start_initialization:
+    45  0006BC                     start_initialization:
     46                           	opt stack 0
-    47  0006BA                     __initialization:
+    47  0006BC                     __initialization:
     48                           	opt stack 0
     49                           
     50                           ; Clear objects allocated to COMRAM (29 bytes)
-    51  0006BA  EE00  F024         	lfsr	0,__pbssCOMRAM
-    52  0006BE  0E1D               	movlw	29
-    53  0006C0                     clear_0:
-    54  0006C0  6AEE               	clrf	postinc0,c
-    55  0006C2  06E8               	decf	wreg,f,c
-    56  0006C4  E1FD               	bnz	clear_0
-    57  0006C6                     end_of_initialization:
+    51  0006BC  EE00  F024         	lfsr	0,__pbssCOMRAM
+    52  0006C0  0E1D               	movlw	29
+    53  0006C2                     clear_0:
+    54  0006C2  6AEE               	clrf	postinc0,c
+    55  0006C4  06E8               	decf	wreg,f,c
+    56  0006C6  E1FD               	bnz	clear_0
+    57  0006C8                     end_of_initialization:
     58                           	opt stack 0
-    59  0006C6                     __end_of__initialization:
+    59  0006C8                     __end_of__initialization:
     60                           	opt stack 0
-    61  0006C6  9041               	bcf	int$flags,0,c	;clear compiler interrupt flag (level 1)
-    62  0006C8  9241               	bcf	int$flags,1,c	;clear compiler interrupt flag (level 2)
-    63  0006CA  0E00               	movlw	low (__Lmediumconst shr (0+16))
-    64  0006CC  6EF8               	movwf	tblptru,c
-    65  0006CE  0100               	movlb	0
-    66  0006D0  EFE6  F000         	goto	_main	;jump to C main() function
+    61  0006C8  9041               	bcf	int$flags,0,c	;clear compiler interrupt flag (level 1)
+    62  0006CA  9241               	bcf	int$flags,1,c	;clear compiler interrupt flag (level 2)
+    63  0006CC  0E00               	movlw	low (__Lmediumconst shr (0+16))
+    64  0006CE  6EF8               	movwf	tblptru,c
+    65  0006D0  0100               	movlb	0
+    66  0006D2  EFE6  F000         	goto	_main	;jump to C main() function
     67                           tblptru	equ	0xFF8
     68                           postinc0	equ	0xFEE
     69                           wreg	equ	0xFE8
@@ -283,7 +283,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    277  0001E6  6E27               	movwf	_score_2,c
    278                           
    279                           ;Main.c: 58: D_SEG_Init();
-   280  0001E8  EC27  F003         	call	_D_SEG_Init	;wreg free
+   280  0001E8  EC28  F003         	call	_D_SEG_Init	;wreg free
    281                           
    282                           ;Main.c: 59: D_SEG_Add(0x00, &PORTA, 2);
    283  0001EC  0E80               	movlw	128
@@ -326,31 +326,31 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    320  000230  EC94  F002         	call	_D_SEG_Add
    321                           
    322                           ;Main.c: 64: D_SEG_Start();
-   323  000234  EC6A  F003         	call	_D_SEG_Start	;wreg free
+   323  000234  EC6B  F003         	call	_D_SEG_Start	;wreg free
    324                           
    325                           ;Main.c: 66: D_SEG_Update(0x00, 0);
    326  000238  0E00               	movlw	0
    327  00023A  6E1E               	movwf	D_SEG_Update@value,c
    328  00023C  0E00               	movlw	0
-   329  00023E  EC3A  F003         	call	_D_SEG_Update
+   329  00023E  EC3B  F003         	call	_D_SEG_Update
    330                           
    331                           ;Main.c: 67: D_SEG_Update(0x01, 0);
    332  000242  0E00               	movlw	0
    333  000244  6E1E               	movwf	D_SEG_Update@value,c
    334  000246  0E01               	movlw	1
-   335  000248  EC3A  F003         	call	_D_SEG_Update
+   335  000248  EC3B  F003         	call	_D_SEG_Update
    336                           
    337                           ;Main.c: 68: D_SEG_Update(0x02, 0);
    338  00024C  0E00               	movlw	0
    339  00024E  6E1E               	movwf	D_SEG_Update@value,c
    340  000250  0E02               	movlw	2
-   341  000252  EC3A  F003         	call	_D_SEG_Update
+   341  000252  EC3B  F003         	call	_D_SEG_Update
    342                           
    343                           ;Main.c: 69: D_SEG_Update(0x03, 0);
    344  000256  0E00               	movlw	0
    345  000258  6E1E               	movwf	D_SEG_Update@value,c
    346  00025A  0E03               	movlw	3
-   347  00025C  EC3A  F003         	call	_D_SEG_Update
+   347  00025C  EC3B  F003         	call	_D_SEG_Update
    348                           
    349                           ;Main.c: 72: TRISAbits.TRISA0 = 1;
    350  000260  8092               	bsf	3986,0,c	;volatile
@@ -689,7 +689,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    683  0002D0  5016               	movf	?___awmod,w,c
    684  0002D2  6E1E               	movwf	D_SEG_Update@value,c
    685  0002D4  0E00               	movlw	0
-   686  0002D6  EC3A  F003         	call	_D_SEG_Update
+   686  0002D6  EC3B  F003         	call	_D_SEG_Update
    687                           
    688                           ;Main.c: 166: D_SEG_Update(0x01, value/10);
    689  0002DA  C020  F016         	movff	setSegments@value,___awdiv@dividend
@@ -702,7 +702,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    696  0002EC  5016               	movf	?___awdiv,w,c
    697  0002EE  6E1E               	movwf	D_SEG_Update@value,c
    698  0002F0  0E01               	movlw	1
-   699  0002F2  EC3A  F003         	call	_D_SEG_Update
+   699  0002F2  EC3B  F003         	call	_D_SEG_Update
    700                           
    701                           ;Main.c: 167: break;
    702  0002F6  0012               	return	
@@ -719,7 +719,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    713  00030A  5016               	movf	?___awmod,w,c
    714  00030C  6E1E               	movwf	D_SEG_Update@value,c
    715  00030E  0E02               	movlw	2
-   716  000310  EC3A  F003         	call	_D_SEG_Update
+   716  000310  EC3B  F003         	call	_D_SEG_Update
    717                           
    718                           ;Main.c: 171: D_SEG_Update(0x03, value/10);
    719  000314  C020  F016         	movff	setSegments@value,___awdiv@dividend
@@ -732,7 +732,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
    726  000326  5016               	movf	?___awdiv,w,c
    727  000328  6E1E               	movwf	D_SEG_Update@value,c
    728  00032A  0E03               	movlw	3
-   729  00032C  EC3A  F003         	call	_D_SEG_Update
+   729  00032C  EC3B  F003         	call	_D_SEG_Update
    730                           
    731                           ;Main.c: 175: }
    732                           
@@ -1023,34 +1023,34 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1017 ;;
   1018                           
   1019                           	psect	text5
-  1020  000674                     __ptext5:
+  1020  000676                     __ptext5:
   1021                           	opt stack 0
-  1022  000674                     _D_SEG_Update:
+  1022  000676                     _D_SEG_Update:
   1023                           	opt stack 24
   1024                           
   1025                           ;incstack = 0
   1026                           ;D_SEG_Update@which stored from wreg
-  1027  000674  6E1F               	movwf	D_SEG_Update@which,c
+  1027  000676  6E1F               	movwf	D_SEG_Update@which,c
   1028                           
   1029                           ;SEG_Driver.c: 133: if(which < segmentCnt) {
-  1030  000676  5028               	movf	_segmentCnt,w,c
-  1031  000678  5C1F               	subwf	D_SEG_Update@which,w,c
-  1032  00067A  B0D8               	btfsc	status,0,c
-  1033  00067C  0012               	return	
+  1030  000678  5028               	movf	_segmentCnt,w,c
+  1031  00067A  5C1F               	subwf	D_SEG_Update@which,w,c
+  1032  00067C  B0D8               	btfsc	status,0,c
+  1033  00067E  0012               	return	
   1034                           
   1035                           ;SEG_Driver.c: 134: convertValueToSegment(&segments[which], value);
-  1036  00067E  501F               	movf	D_SEG_Update@which,w,c
-  1037  000680  0D06               	mullw	6
-  1038  000682  0E29               	movlw	low _segments
-  1039  000684  24F3               	addwf	prodl,w,c
-  1040  000686  6E16               	movwf	convertValueToSegment@segment,c
-  1041  000688  0E00               	movlw	high _segments
-  1042  00068A  20F4               	addwfc	prodh,w,c
-  1043  00068C  6E17               	movwf	convertValueToSegment@segment+1,c
-  1044  00068E  C01E  F018         	movff	D_SEG_Update@value,convertValueToSegment@data
-  1045  000692  EC65  F000         	call	_convertValueToSegment	;wreg free
-  1046  000696  0012               	return	
-  1047  000698                     __end_of_D_SEG_Update:
+  1036  000680  501F               	movf	D_SEG_Update@which,w,c
+  1037  000682  0D06               	mullw	6
+  1038  000684  0E29               	movlw	low _segments
+  1039  000686  24F3               	addwf	prodl,w,c
+  1040  000688  6E16               	movwf	convertValueToSegment@segment,c
+  1041  00068A  0E00               	movlw	high _segments
+  1042  00068C  20F4               	addwfc	prodh,w,c
+  1043  00068E  6E17               	movwf	convertValueToSegment@segment+1,c
+  1044  000690  C01E  F018         	movff	D_SEG_Update@value,convertValueToSegment@data
+  1045  000694  EC65  F000         	call	_convertValueToSegment	;wreg free
+  1046  000698  0012               	return	
+  1047  00069A                     __end_of_D_SEG_Update:
   1048                           	opt stack 0
   1049                           tblptru	equ	0xFF8
   1050                           prodh	equ	0xFF4
@@ -1502,7 +1502,7 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1496  00062C  6E19               	movwf	delay@i,c
   1497                           
   1498                           ;Main.c: 193: while(ms > 0) {
-  1499  00062E  D00A               	goto	l170
+  1499  00062E  D00B               	goto	l170
   1500  000630                     l1229:
   1501                           
   1502                           ;Main.c: 194: ms--;
@@ -1510,749 +1510,750 @@ Microchip Technology Omniscient Code Generator v1.37 (Free mode) build 201603110
   1504  000632  A0D8               	btfss	status,0,c
   1505  000634  0617               	decf	delay@ms+1,f,c
   1506                           
-  1507                           ;Main.c: 195: _delay((unsigned long)((1)*(10000000/4000.0)));
-  1508  000636  0E04               	movlw	4
+  1507                           ;Main.c: 195: _delay((unsigned long)((1)*(16000000/4000.0)));
+  1508  000636  0E06               	movlw	6
   1509  000638  6E18               	movwf	??_delay& (0+255),c
-  1510  00063A  0E3E               	movlw	62
+  1510  00063A  0E30               	movlw	48
   1511  00063C                     u577:
   1512  00063C  2EE8               	decfsz	wreg,f,c
   1513  00063E  D7FE               	goto	u577
   1514  000640  2E18               	decfsz	??_delay& (0+255),f,c
   1515  000642  D7FC               	goto	u577
-  1516  000644                     l170:
-  1517  000644  5016               	movf	delay@ms,w,c
-  1518  000646  1017               	iorwf	delay@ms+1,w,c
-  1519  000648  B4D8               	btfsc	status,2,c
-  1520  00064A  0012               	return	
-  1521  00064C  D7F1               	goto	l1229
-  1522  00064E                     __end_of_delay:
-  1523                           	opt stack 0
-  1524                           tblptru	equ	0xFF8
-  1525                           prodh	equ	0xFF4
-  1526                           prodl	equ	0xFF3
-  1527                           postinc0	equ	0xFEE
-  1528                           wreg	equ	0xFE8
-  1529                           indf2	equ	0xFDF
-  1530                           fsr2h	equ	0xFDA
-  1531                           fsr2l	equ	0xFD9
-  1532                           status	equ	0xFD8
-  1533                           
-  1534 ;; *************** function _D_SEG_Start *****************
-  1535 ;; Defined at:
-  1536 ;;		line 117 in file "Drivers/SEG_Driver.c"
-  1537 ;; Parameters:    Size  Location     Type
-  1538 ;;		None
-  1539 ;; Auto vars:     Size  Location     Type
-  1540 ;;		None
-  1541 ;; Return value:  Size  Location     Type
-  1542 ;;                  1    wreg      void 
-  1543 ;; Registers used:
-  1544 ;;		None
-  1545 ;; Tracked objects:
-  1546 ;;		On entry : 0/0
-  1547 ;;		On exit  : 0/0
-  1548 ;;		Unchanged: 0/0
-  1549 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1550 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1551 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  1552 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1553 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  1554 ;;Total ram usage:        0 bytes
-  1555 ;; Hardware stack levels used:    1
-  1556 ;; Hardware stack levels required when called:    3
-  1557 ;; This function calls:
-  1558 ;;		Nothing
-  1559 ;; This function is called by:
-  1560 ;;		_main
-  1561 ;; This function uses a non-reentrant model
-  1562 ;;
-  1563                           
-  1564                           	psect	text10
-  1565  0006D4                     __ptext10:
-  1566                           	opt stack 0
-  1567  0006D4                     _D_SEG_Start:
-  1568                           	opt stack 27
-  1569                           
-  1570                           ;SEG_Driver.c: 119: T0CONbits.TMR0ON = 1;
-  1571                           
-  1572                           ;incstack = 0
-  1573  0006D4  8ED5               	bsf	4053,7,c	;volatile
-  1574  0006D6  0012               	return		;funcret
-  1575  0006D8                     __end_of_D_SEG_Start:
-  1576                           	opt stack 0
-  1577                           tblptru	equ	0xFF8
-  1578                           prodh	equ	0xFF4
-  1579                           prodl	equ	0xFF3
-  1580                           postinc0	equ	0xFEE
-  1581                           wreg	equ	0xFE8
-  1582                           indf2	equ	0xFDF
-  1583                           fsr2h	equ	0xFDA
-  1584                           fsr2l	equ	0xFD9
-  1585                           status	equ	0xFD8
-  1586                           
-  1587 ;; *************** function _D_SEG_Init *****************
-  1588 ;; Defined at:
-  1589 ;;		line 76 in file "Drivers/SEG_Driver.c"
-  1590 ;; Parameters:    Size  Location     Type
-  1591 ;;		None
-  1592 ;; Auto vars:     Size  Location     Type
-  1593 ;;		None
-  1594 ;; Return value:  Size  Location     Type
-  1595 ;;                  1    wreg      void 
-  1596 ;; Registers used:
-  1597 ;;		wreg, status,2
-  1598 ;; Tracked objects:
-  1599 ;;		On entry : 0/0
-  1600 ;;		On exit  : 0/0
-  1601 ;;		Unchanged: 0/0
-  1602 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1603 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1604 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  1605 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1606 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  1607 ;;Total ram usage:        0 bytes
-  1608 ;; Hardware stack levels used:    1
-  1609 ;; Hardware stack levels required when called:    3
-  1610 ;; This function calls:
-  1611 ;;		Nothing
-  1612 ;; This function is called by:
-  1613 ;;		_main
-  1614 ;; This function uses a non-reentrant model
-  1615 ;;
-  1616                           
-  1617                           	psect	text11
-  1618  00064E                     __ptext11:
-  1619                           	opt stack 0
-  1620  00064E                     _D_SEG_Init:
-  1621                           	opt stack 27
-  1622                           
-  1623                           ;SEG_Driver.c: 78: segmentCnt = 0;
-  1624                           
-  1625                           ;incstack = 0
-  1626  00064E  0E00               	movlw	0
-  1627  000650  6E28               	movwf	_segmentCnt,c
-  1628                           
-  1629                           ;SEG_Driver.c: 79: currentSeg = 0;
-  1630  000652  0E00               	movlw	0
-  1631  000654  6E25               	movwf	_currentSeg,c
-  1632                           
-  1633                           ;SEG_Driver.c: 82: T0CONbits.TMR0ON = 0;
-  1634  000656  9ED5               	bcf	4053,7,c	;volatile
-  1635                           
-  1636                           ;SEG_Driver.c: 83: T0CONbits.T08BIT = 1;
-  1637  000658  8CD5               	bsf	4053,6,c	;volatile
-  1638                           
-  1639                           ;SEG_Driver.c: 84: T0CONbits.T0CS = 0;
-  1640  00065A  9AD5               	bcf	4053,5,c	;volatile
-  1641                           
-  1642                           ;SEG_Driver.c: 85: T0CONbits.PSA = 0;
-  1643  00065C  96D5               	bcf	4053,3,c	;volatile
-  1644                           
-  1645                           ;SEG_Driver.c: 86: T0CONbits.T0PS = 0b011;
-  1646  00065E  50D5               	movf	4053,w,c	;volatile
-  1647  000660  0BF8               	andlw	-8
-  1648  000662  0903               	iorlw	3
-  1649  000664  6ED5               	movwf	4053,c	;volatile
-  1650                           
-  1651                           ;SEG_Driver.c: 89: RCONbits.IPEN = 1;
-  1652  000666  8ED0               	bsf	4048,7,c	;volatile
-  1653                           
-  1654                           ;SEG_Driver.c: 90: INTCONbits.GIEH = 1;
-  1655  000668  8EF2               	bsf	intcon,7,c	;volatile
-  1656                           
-  1657                           ;SEG_Driver.c: 91: INTCONbits.GIEL = 1;
-  1658  00066A  8CF2               	bsf	intcon,6,c	;volatile
-  1659                           
-  1660                           ;SEG_Driver.c: 93: INTCONbits.TMR0IF = 0;
-  1661  00066C  94F2               	bcf	intcon,2,c	;volatile
-  1662                           
-  1663                           ;SEG_Driver.c: 94: INTCON2bits.TMR0IP = 0;
-  1664  00066E  94F1               	bcf	intcon2,2,c	;volatile
-  1665                           
-  1666                           ;SEG_Driver.c: 95: INTCONbits.TMR0IE = 1;
-  1667  000670  8AF2               	bsf	intcon,5,c	;volatile
-  1668  000672  0012               	return		;funcret
-  1669  000674                     __end_of_D_SEG_Init:
-  1670                           	opt stack 0
-  1671                           tblptru	equ	0xFF8
-  1672                           prodh	equ	0xFF4
-  1673                           prodl	equ	0xFF3
-  1674                           intcon	equ	0xFF2
-  1675                           intcon2	equ	0xFF1
-  1676                           postinc0	equ	0xFEE
-  1677                           wreg	equ	0xFE8
-  1678                           indf2	equ	0xFDF
-  1679                           fsr2h	equ	0xFDA
-  1680                           fsr2l	equ	0xFD9
-  1681                           status	equ	0xFD8
-  1682                           
-  1683 ;; *************** function _D_SEG_Add *****************
-  1684 ;; Defined at:
-  1685 ;;		line 98 in file "Drivers/SEG_Driver.c"
-  1686 ;; Parameters:    Size  Location     Type
-  1687 ;;  ID              1    wreg     unsigned char 
-  1688 ;;  port            2   21[COMRAM] PTR volatile unsigned ch
-  1689 ;;		 -> PORTA(1), 
-  1690 ;;  portPin         1   23[COMRAM] unsigned char 
-  1691 ;; Auto vars:     Size  Location     Type
-  1692 ;;  ID              1   25[COMRAM] unsigned char 
-  1693 ;;  temp            6   27[COMRAM] struct .
-  1694 ;;  i               1   26[COMRAM] unsigned char 
-  1695 ;; Return value:  Size  Location     Type
-  1696 ;;                  1    wreg      void 
-  1697 ;; Registers used:
-  1698 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh
-  1699 ;; Tracked objects:
-  1700 ;;		On entry : 0/0
-  1701 ;;		On exit  : 0/0
-  1702 ;;		Unchanged: 0/0
-  1703 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1704 ;;      Params:         3       0       0       0       0       0       0       0       0
-  1705 ;;      Locals:         8       0       0       0       0       0       0       0       0
-  1706 ;;      Temps:          1       0       0       0       0       0       0       0       0
-  1707 ;;      Totals:        12       0       0       0       0       0       0       0       0
-  1708 ;;Total ram usage:       12 bytes
-  1709 ;; Hardware stack levels used:    1
-  1710 ;; Hardware stack levels required when called:    3
-  1711 ;; This function calls:
-  1712 ;;		Nothing
-  1713 ;; This function is called by:
-  1714 ;;		_main
-  1715 ;; This function uses a non-reentrant model
-  1716 ;;
-  1717                           
-  1718                           	psect	text12
-  1719  000528                     __ptext12:
-  1720                           	opt stack 0
-  1721  000528                     _D_SEG_Add:
-  1722                           	opt stack 27
-  1723                           
-  1724                           ;incstack = 0
-  1725                           ;D_SEG_Add@ID stored from wreg
-  1726  000528  6E1A               	movwf	D_SEG_Add@ID,c
-  1727                           
-  1728                           ;SEG_Driver.c: 99: if(segmentCnt < 4) {
-  1729  00052A  0E04               	movlw	4
-  1730  00052C  6028               	cpfslt	_segmentCnt,c
-  1731  00052E  0012               	return	
-  1732                           
-  1733                           ;SEG_Driver.c: 100: uint8_t i;
-  1734                           ;SEG_Driver.c: 101: for(i=0; i<segmentCnt; i++) {
-  1735  000530  0E00               	movlw	0
-  1736  000532  6E1B               	movwf	D_SEG_Add@i,c
-  1737  000534  D00D               	goto	l1243
-  1738  000536                     l1237:
-  1739                           
-  1740                           ;SEG_Driver.c: 102: if(segments[i].ID == ID) return;
-  1741  000536  501B               	movf	D_SEG_Add@i,w,c
-  1742  000538  0D06               	mullw	6
-  1743  00053A  0E29               	movlw	low _segments
-  1744  00053C  24F3               	addwf	prodl,w,c
-  1745  00053E  6ED9               	movwf	fsr2l,c
-  1746  000540  0E00               	movlw	high _segments
-  1747  000542  20F4               	addwfc	prodh,w,c
-  1748  000544  6EDA               	movwf	fsr2h,c
-  1749  000546  501A               	movf	D_SEG_Add@ID,w,c
-  1750  000548  18DE               	xorwf	postinc2,w,c
-  1751  00054A  B4D8               	btfsc	status,2,c
-  1752  00054C  0012               	return	
-  1753  00054E  2A1B               	incf	D_SEG_Add@i,f,c
-  1754  000550                     l1243:
-  1755  000550  5028               	movf	_segmentCnt,w,c
-  1756  000552  5C1B               	subwf	D_SEG_Add@i,w,c
-  1757  000554  A0D8               	btfss	status,0,c
-  1758  000556  D7EF               	goto	l1237
-  1759                           
-  1760                           ;SEG_Driver.c: 103: }
-  1761                           ;SEG_Driver.c: 105: SEG_Segment temp;
-  1762                           ;SEG_Driver.c: 106: temp.ID = segmentCnt;
-  1763  000558  C028  F01C         	movff	_segmentCnt,D_SEG_Add@temp
-  1764                           
-  1765                           ;SEG_Driver.c: 107: temp.PORT = port;
-  1766  00055C  C016  F01D         	movff	D_SEG_Add@port,D_SEG_Add@temp+1
-  1767  000560  C017  F01E         	movff	D_SEG_Add@port+1,D_SEG_Add@temp+2
-  1768                           
-  1769                           ;SEG_Driver.c: 108: temp.portBit = portPin;
-  1770  000564  C018  F01F         	movff	D_SEG_Add@portPin,D_SEG_Add@temp+3
-  1771                           
-  1772                           ;SEG_Driver.c: 109: temp.value = 0;
-  1773  000568  0E00               	movlw	0
-  1774  00056A  6E20               	movwf	D_SEG_Add@temp+4,c
-  1775                           
-  1776                           ;SEG_Driver.c: 110: temp.converted = 0;
-  1777  00056C  0E00               	movlw	0
-  1778  00056E  6E21               	movwf	D_SEG_Add@temp+5,c
-  1779                           
-  1780                           ;SEG_Driver.c: 111: segments[segmentCnt] = temp;
-  1781  000570  EE20  F01C         	lfsr	2,D_SEG_Add@temp
-  1782  000574  5028               	movf	_segmentCnt,w,c
-  1783  000576  0D06               	mullw	6
-  1784  000578  0E29               	movlw	low _segments
-  1785  00057A  24F3               	addwf	prodl,w,c
-  1786  00057C  6EE1               	movwf	fsr1l,c
-  1787  00057E  0E00               	movlw	high _segments
-  1788  000580  20F4               	addwfc	prodh,w,c
-  1789  000582  6EE2               	movwf	fsr1h,c
-  1790  000584  0E05               	movlw	5
-  1791  000586                     u521:
-  1792  000586  CFDB FFE3          	movff	plusw2,plusw1
-  1793  00058A  06E8               	decf	wreg,f,c
-  1794  00058C  E2FC               	bc	u521
-  1795                           
-  1796                           ;SEG_Driver.c: 113: segmentCnt++;
-  1797  00058E  2A28               	incf	_segmentCnt,f,c
-  1798  000590  0012               	return	
-  1799  000592                     __end_of_D_SEG_Add:
-  1800                           	opt stack 0
-  1801                           tblptru	equ	0xFF8
-  1802                           prodh	equ	0xFF4
-  1803                           prodl	equ	0xFF3
-  1804                           intcon	equ	0xFF2
-  1805                           intcon2	equ	0xFF1
-  1806                           postinc0	equ	0xFEE
-  1807                           wreg	equ	0xFE8
-  1808                           plusw1	equ	0xFE3
-  1809                           fsr1h	equ	0xFE2
-  1810                           fsr1l	equ	0xFE1
-  1811                           indf2	equ	0xFDF
-  1812                           postinc2	equ	0xFDE
-  1813                           plusw2	equ	0xFDB
-  1814                           fsr2h	equ	0xFDA
-  1815                           fsr2l	equ	0xFD9
-  1816                           status	equ	0xFD8
-  1817                           
-  1818 ;; *************** function _LowInterruptRoutine *****************
-  1819 ;; Defined at:
-  1820 ;;		line 138 in file "Drivers/SEG_Driver.c"
-  1821 ;; Parameters:    Size  Location     Type
-  1822 ;;		None
-  1823 ;; Auto vars:     Size  Location     Type
-  1824 ;;		None
-  1825 ;; Return value:  Size  Location     Type
-  1826 ;;                  1    wreg      void 
-  1827 ;; Registers used:
-  1828 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
-  1829 ;; Tracked objects:
-  1830 ;;		On entry : 0/0
-  1831 ;;		On exit  : 0/0
-  1832 ;;		Unchanged: 0/0
-  1833 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1834 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1835 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  1836 ;;      Temps:         18       0       0       0       0       0       0       0       0
-  1837 ;;      Totals:        18       0       0       0       0       0       0       0       0
-  1838 ;;Total ram usage:       18 bytes
-  1839 ;; Hardware stack levels used:    1
-  1840 ;; Hardware stack levels required when called:    2
-  1841 ;; This function calls:
-  1842 ;;		_writeSegment
-  1843 ;; This function is called by:
-  1844 ;;		Interrupt level 1
-  1845 ;; This function uses a non-reentrant model
-  1846 ;;
-  1847                           
-  1848                           	psect	intcodelo
-  1849  000018                     __pintcodelo:
-  1850                           	opt stack 0
-  1851  000018                     _LowInterruptRoutine:
-  1852                           	opt stack 24
-  1853                           
-  1854                           ;incstack = 0
-  1855  000018  8041               	bsf	btemp,0,c	;set compiler interrupt flag (level 1)
-  1856  00001A  CFD8 F005          	movff	status,??_LowInterruptRoutine+1
-  1857  00001E  CFE8 F006          	movff	wreg,??_LowInterruptRoutine+2
-  1858  000022  CFE0 F007          	movff	bsr,??_LowInterruptRoutine+3
-  1859  000026  CFFA F008          	movff	pclath,??_LowInterruptRoutine+4
-  1860  00002A  CFFB F009          	movff	pclatu,??_LowInterruptRoutine+5
-  1861  00002E  CFE9 F00A          	movff	fsr0l,??_LowInterruptRoutine+6
-  1862  000032  CFEA F00B          	movff	fsr0h,??_LowInterruptRoutine+7
-  1863  000036  CFE1 F00C          	movff	fsr1l,??_LowInterruptRoutine+8
-  1864  00003A  CFE2 F00D          	movff	fsr1h,??_LowInterruptRoutine+9
-  1865  00003E  CFD9 F00E          	movff	fsr2l,??_LowInterruptRoutine+10
-  1866  000042  CFDA F00F          	movff	fsr2h,??_LowInterruptRoutine+11
-  1867  000046  CFF3 F010          	movff	prodl,??_LowInterruptRoutine+12
-  1868  00004A  CFF4 F011          	movff	prodh,??_LowInterruptRoutine+13
-  1869  00004E  CFF6 F012          	movff	tblptrl,??_LowInterruptRoutine+14
-  1870  000052  CFF7 F013          	movff	tblptrh,??_LowInterruptRoutine+15
-  1871  000056  CFF8 F014          	movff	tblptru,??_LowInterruptRoutine+16
-  1872  00005A  CFF5 F015          	movff	tablat,??_LowInterruptRoutine+17
-  1873                           
-  1874                           ;SEG_Driver.c: 139: if(INTCONbits.T0IF) {
-  1875  00005E  A4F2               	btfss	intcon,2,c	;volatile
-  1876  000060  D00E               	goto	i1l70
-  1877                           
-  1878                           ;SEG_Driver.c: 140: PORTAbits.RA0 = !PORTAbits.RA0;
-  1879  000062  B080               	btfsc	3968,0,c	;volatile
-  1880  000064  D003               	goto	i1u32_20
-  1881  000066  6A04               	clrf	??_LowInterruptRoutine& (0+255),c
-  1882  000068  2A04               	incf	??_LowInterruptRoutine& (0+255),f,c
-  1883  00006A  D001               	goto	i1u33_28
-  1884  00006C                     i1u32_20:
-  1885  00006C  6A04               	clrf	??_LowInterruptRoutine& (0+255),c
-  1886  00006E                     i1u33_28:
-  1887  00006E  5080               	movf	3968,w,c	;volatile
-  1888  000070  1804               	xorwf	??_LowInterruptRoutine,w,c
-  1889  000072  0BFE               	andlw	-2
-  1890  000074  1804               	xorwf	??_LowInterruptRoutine,w,c
-  1891  000076  6E80               	movwf	3968,c	;volatile
-  1892                           
-  1893                           ;SEG_Driver.c: 142: writeSegment();
-  1894  000078  EC4C  F003         	call	_writeSegment	;wreg free
-  1895                           
-  1896                           ;SEG_Driver.c: 143: INTCONbits.T0IF = 0;
-  1897  00007C  94F2               	bcf	intcon,2,c	;volatile
-  1898  00007E                     i1l70:
-  1899  00007E  C015  FFF5         	movff	??_LowInterruptRoutine+17,tablat
-  1900  000082  C014  FFF8         	movff	??_LowInterruptRoutine+16,tblptru
-  1901  000086  C013  FFF7         	movff	??_LowInterruptRoutine+15,tblptrh
-  1902  00008A  C012  FFF6         	movff	??_LowInterruptRoutine+14,tblptrl
-  1903  00008E  C011  FFF4         	movff	??_LowInterruptRoutine+13,prodh
-  1904  000092  C010  FFF3         	movff	??_LowInterruptRoutine+12,prodl
-  1905  000096  C00F  FFDA         	movff	??_LowInterruptRoutine+11,fsr2h
-  1906  00009A  C00E  FFD9         	movff	??_LowInterruptRoutine+10,fsr2l
-  1907  00009E  C00D  FFE2         	movff	??_LowInterruptRoutine+9,fsr1h
-  1908  0000A2  C00C  FFE1         	movff	??_LowInterruptRoutine+8,fsr1l
-  1909  0000A6  C00B  FFEA         	movff	??_LowInterruptRoutine+7,fsr0h
-  1910  0000AA  C00A  FFE9         	movff	??_LowInterruptRoutine+6,fsr0l
-  1911  0000AE  C009  FFFB         	movff	??_LowInterruptRoutine+5,pclatu
-  1912  0000B2  C008  FFFA         	movff	??_LowInterruptRoutine+4,pclath
-  1913  0000B6  C007  FFE0         	movff	??_LowInterruptRoutine+3,bsr
-  1914  0000BA  C006  FFE8         	movff	??_LowInterruptRoutine+2,wreg
-  1915  0000BE  C005  FFD8         	movff	??_LowInterruptRoutine+1,status
-  1916  0000C2  9041               	bcf	btemp,0,c	;clear compiler interrupt flag (level 1)
-  1917  0000C4  0010               	retfie	
-  1918  0000C6                     __end_of_LowInterruptRoutine:
-  1919                           	opt stack 0
-  1920                           pclatu	equ	0xFFB
-  1921                           pclath	equ	0xFFA
-  1922                           tblptru	equ	0xFF8
-  1923                           tblptrh	equ	0xFF7
-  1924                           tblptrl	equ	0xFF6
-  1925                           tablat	equ	0xFF5
-  1926                           prodh	equ	0xFF4
-  1927                           prodl	equ	0xFF3
-  1928                           intcon	equ	0xFF2
-  1929                           intcon2	equ	0xFF1
-  1930                           postinc0	equ	0xFEE
-  1931                           fsr0h	equ	0xFEA
-  1932                           fsr0l	equ	0xFE9
-  1933                           wreg	equ	0xFE8
-  1934                           plusw1	equ	0xFE3
-  1935                           fsr1h	equ	0xFE2
-  1936                           fsr1l	equ	0xFE1
-  1937                           bsr	equ	0xFE0
-  1938                           indf2	equ	0xFDF
-  1939                           postinc2	equ	0xFDE
-  1940                           plusw2	equ	0xFDB
-  1941                           fsr2h	equ	0xFDA
-  1942                           fsr2l	equ	0xFD9
-  1943                           status	equ	0xFD8
-  1944                           
-  1945 ;; *************** function _writeSegment *****************
-  1946 ;; Defined at:
-  1947 ;;		line 68 in file "Drivers/SEG_Driver.c"
-  1948 ;; Parameters:    Size  Location     Type
-  1949 ;;		None
-  1950 ;; Auto vars:     Size  Location     Type
-  1951 ;;		None
-  1952 ;; Return value:  Size  Location     Type
-  1953 ;;                  1    wreg      void 
-  1954 ;; Registers used:
-  1955 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
-  1956 ;; Tracked objects:
-  1957 ;;		On entry : 0/0
-  1958 ;;		On exit  : 0/0
-  1959 ;;		Unchanged: 0/0
-  1960 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  1961 ;;      Params:         0       0       0       0       0       0       0       0       0
-  1962 ;;      Locals:         0       0       0       0       0       0       0       0       0
-  1963 ;;      Temps:          0       0       0       0       0       0       0       0       0
-  1964 ;;      Totals:         0       0       0       0       0       0       0       0       0
-  1965 ;;Total ram usage:        0 bytes
-  1966 ;; Hardware stack levels used:    1
-  1967 ;; Hardware stack levels required when called:    1
-  1968 ;; This function calls:
-  1969 ;;		_selectNextSegment
-  1970 ;; This function is called by:
-  1971 ;;		_LowInterruptRoutine
-  1972 ;; This function uses a non-reentrant model
-  1973 ;;
-  1974                           
-  1975                           	psect	text14
-  1976  000698                     __ptext14:
-  1977                           	opt stack 0
-  1978  000698                     _writeSegment:
-  1979                           	opt stack 24
-  1980                           
-  1981                           ;SEG_Driver.c: 69: selectNextSegment();
-  1982                           
-  1983                           ;incstack = 0
-  1984  000698  EC21  F002         	call	_selectNextSegment	;wreg free
-  1985                           
-  1986                           ;SEG_Driver.c: 70: PORTB = segments[currentSeg].converted;
-  1987  00069C  5025               	movf	_currentSeg,w,c
-  1988  00069E  0D06               	mullw	6
-  1989  0006A0  0E05               	movlw	5
-  1990  0006A2  26F3               	addwf	prodl,f,c
-  1991  0006A4  0E00               	movlw	0
-  1992  0006A6  22F4               	addwfc	prodh,f,c
-  1993  0006A8  0E29               	movlw	low _segments
-  1994  0006AA  24F3               	addwf	prodl,w,c
-  1995  0006AC  6ED9               	movwf	fsr2l,c
-  1996  0006AE  0E00               	movlw	high _segments
-  1997  0006B0  20F4               	addwfc	prodh,w,c
-  1998  0006B2  6EDA               	movwf	fsr2h,c
-  1999  0006B4  50DF               	movf	indf2,w,c
-  2000  0006B6  6E81               	movwf	3969,c	;volatile
-  2001  0006B8  0012               	return		;funcret
-  2002  0006BA                     __end_of_writeSegment:
-  2003                           	opt stack 0
-  2004                           pclatu	equ	0xFFB
-  2005                           pclath	equ	0xFFA
-  2006                           tblptru	equ	0xFF8
-  2007                           tblptrh	equ	0xFF7
-  2008                           tblptrl	equ	0xFF6
-  2009                           tablat	equ	0xFF5
-  2010                           prodh	equ	0xFF4
-  2011                           prodl	equ	0xFF3
-  2012                           intcon	equ	0xFF2
-  2013                           intcon2	equ	0xFF1
-  2014                           postinc0	equ	0xFEE
-  2015                           fsr0h	equ	0xFEA
-  2016                           fsr0l	equ	0xFE9
-  2017                           wreg	equ	0xFE8
-  2018                           plusw1	equ	0xFE3
-  2019                           fsr1h	equ	0xFE2
-  2020                           fsr1l	equ	0xFE1
-  2021                           bsr	equ	0xFE0
-  2022                           indf2	equ	0xFDF
-  2023                           postinc2	equ	0xFDE
-  2024                           plusw2	equ	0xFDB
-  2025                           fsr2h	equ	0xFDA
-  2026                           fsr2l	equ	0xFD9
-  2027                           status	equ	0xFD8
-  2028                           
-  2029 ;; *************** function _selectNextSegment *****************
-  2030 ;; Defined at:
-  2031 ;;		line 32 in file "Drivers/SEG_Driver.c"
-  2032 ;; Parameters:    Size  Location     Type
-  2033 ;;		None
-  2034 ;; Auto vars:     Size  Location     Type
-  2035 ;;  select          1    2[COMRAM] unsigned char 
-  2036 ;; Return value:  Size  Location     Type
-  2037 ;;                  1    wreg      void 
-  2038 ;; Registers used:
-  2039 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
-  2040 ;; Tracked objects:
-  2041 ;;		On entry : 0/0
-  2042 ;;		On exit  : 0/0
-  2043 ;;		Unchanged: 0/0
-  2044 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-  2045 ;;      Params:         0       0       0       0       0       0       0       0       0
-  2046 ;;      Locals:         1       0       0       0       0       0       0       0       0
-  2047 ;;      Temps:          2       0       0       0       0       0       0       0       0
-  2048 ;;      Totals:         3       0       0       0       0       0       0       0       0
-  2049 ;;Total ram usage:        3 bytes
-  2050 ;; Hardware stack levels used:    1
-  2051 ;; This function calls:
-  2052 ;;		Nothing
-  2053 ;; This function is called by:
-  2054 ;;		_writeSegment
-  2055 ;; This function uses a non-reentrant model
-  2056 ;;
-  2057                           
-  2058                           	psect	text15
-  2059  000442                     __ptext15:
-  2060                           	opt stack 0
-  2061  000442                     _selectNextSegment:
-  2062                           	opt stack 24
-  2063                           
-  2064                           ;SEG_Driver.c: 33: if(segmentCnt > 0) {
-  2065                           
-  2066                           ;incstack = 0
-  2067  000442  5028               	movf	_segmentCnt,w,c
-  2068  000444  B4D8               	btfsc	status,2,c
-  2069  000446  0012               	return	
-  2070                           
-  2071                           ;SEG_Driver.c: 37: if(currentSeg == segmentCnt) {
-  2072  000448  5028               	movf	_segmentCnt,w,c
-  2073  00044A  1825               	xorwf	_currentSeg,w,c
-  2074  00044C  A4D8               	btfss	status,2,c
-  2075  00044E  D003               	goto	i1l905
-  2076                           
-  2077                           ;SEG_Driver.c: 38: currentSeg = 0;
-  2078  000450  0E00               	movlw	0
-  2079  000452  6E25               	movwf	_currentSeg,c
-  2080                           
-  2081                           ;SEG_Driver.c: 39: } else {
-  2082  000454  D001               	goto	i1l907
-  2083  000456                     i1l905:
-  2084                           
-  2085                           ;SEG_Driver.c: 40: currentSeg++;
-  2086  000456  2A25               	incf	_currentSeg,f,c
-  2087  000458                     i1l907:
-  2088                           
-  2089                           ;SEG_Driver.c: 41: }
-  2090                           ;SEG_Driver.c: 42: uint8_t select = 0xFF;
-  2091  000458  6803               	setf	selectNextSegment@select,c
-  2092                           
-  2093                           ;SEG_Driver.c: 43: select &= (1 << segments[currentSeg].portBit);
-  2094  00045A  5025               	movf	_currentSeg,w,c
-  2095  00045C  0D06               	mullw	6
-  2096  00045E  0E03               	movlw	3
-  2097  000460  26F3               	addwf	prodl,f,c
-  2098  000462  0E00               	movlw	0
-  2099  000464  22F4               	addwfc	prodh,f,c
-  2100  000466  0E29               	movlw	low _segments
-  2101  000468  24F3               	addwf	prodl,w,c
-  2102  00046A  6ED9               	movwf	fsr2l,c
-  2103  00046C  0E00               	movlw	high _segments
-  2104  00046E  20F4               	addwfc	prodh,w,c
-  2105  000470  6EDA               	movwf	fsr2h,c
-  2106  000472  50DF               	movf	indf2,w,c
-  2107  000474  6E01               	movwf	??_selectNextSegment& (0+255),c
-  2108  000476  0E01               	movlw	1
-  2109  000478  6E02               	movwf	(??_selectNextSegment+1)& (0+255),c
-  2110  00047A  2A01               	incf	??_selectNextSegment,f,c
-  2111  00047C  D002               	goto	i1u17_24
-  2112  00047E                     i1u17_25:
-  2113  00047E  90D8               	bcf	status,0,c
-  2114  000480  3602               	rlcf	??_selectNextSegment+1,f,c
-  2115  000482                     i1u17_24:
-  2116  000482  2E01               	decfsz	??_selectNextSegment,f,c
-  2117  000484  D7FC               	goto	i1u17_25
-  2118  000486  5002               	movf	??_selectNextSegment+1,w,c
-  2119  000488  1603               	andwf	selectNextSegment@select,f,c
-  2120                           
-  2121                           ;SEG_Driver.c: 44: *segments[currentSeg].PORT = select;
-  2122  00048A  5025               	movf	_currentSeg,w,c
-  2123  00048C  0D06               	mullw	6
-  2124  00048E  0E01               	movlw	1
-  2125  000490  26F3               	addwf	prodl,f,c
-  2126  000492  0E00               	movlw	0
-  2127  000494  22F4               	addwfc	prodh,f,c
-  2128  000496  0E29               	movlw	low _segments
-  2129  000498  24F3               	addwf	prodl,w,c
-  2130  00049A  6ED9               	movwf	fsr2l,c
-  2131  00049C  0E00               	movlw	high _segments
-  2132  00049E  20F4               	addwfc	prodh,w,c
-  2133  0004A0  6EDA               	movwf	fsr2h,c
-  2134  0004A2  CFDE F001          	movff	postinc2,??_selectNextSegment
-  2135  0004A6  CFDD F002          	movff	postdec2,??_selectNextSegment+1
-  2136  0004AA  C001  FFD9         	movff	??_selectNextSegment,fsr2l
-  2137  0004AE  C002  FFDA         	movff	??_selectNextSegment+1,fsr2h
-  2138  0004B2  C003  FFDF         	movff	selectNextSegment@select,indf2
-  2139  0004B6  0012               	return	
-  2140  0004B8                     __end_of_selectNextSegment:
-  2141                           	opt stack 0
-  2142  0000                     pclatu	equ	0xFFB
-  2143                           pclath	equ	0xFFA
-  2144                           tblptru	equ	0xFF8
-  2145                           tblptrh	equ	0xFF7
-  2146                           tblptrl	equ	0xFF6
-  2147                           tablat	equ	0xFF5
-  2148                           prodh	equ	0xFF4
-  2149                           prodl	equ	0xFF3
-  2150                           intcon	equ	0xFF2
-  2151                           intcon2	equ	0xFF1
-  2152                           postinc0	equ	0xFEE
-  2153                           fsr0h	equ	0xFEA
-  2154                           fsr0l	equ	0xFE9
-  2155                           wreg	equ	0xFE8
-  2156                           plusw1	equ	0xFE3
-  2157                           fsr1h	equ	0xFE2
-  2158                           fsr1l	equ	0xFE1
-  2159                           bsr	equ	0xFE0
-  2160                           indf2	equ	0xFDF
-  2161                           postinc2	equ	0xFDE
-  2162                           postdec2	equ	0xFDD
-  2163                           plusw2	equ	0xFDB
-  2164                           fsr2h	equ	0xFDA
-  2165                           fsr2l	equ	0xFD9
-  2166                           status	equ	0xFD8
-  2167                           pclatu	equ	0xFFB
-  2168                           pclath	equ	0xFFA
-  2169                           tblptru	equ	0xFF8
-  2170                           tblptrh	equ	0xFF7
-  2171                           tblptrl	equ	0xFF6
-  2172                           tablat	equ	0xFF5
-  2173                           prodh	equ	0xFF4
-  2174                           prodl	equ	0xFF3
-  2175                           intcon	equ	0xFF2
-  2176                           intcon2	equ	0xFF1
-  2177                           postinc0	equ	0xFEE
-  2178                           fsr0h	equ	0xFEA
-  2179                           fsr0l	equ	0xFE9
-  2180                           wreg	equ	0xFE8
-  2181                           plusw1	equ	0xFE3
-  2182                           fsr1h	equ	0xFE2
-  2183                           fsr1l	equ	0xFE1
-  2184                           bsr	equ	0xFE0
-  2185                           indf2	equ	0xFDF
-  2186                           postinc2	equ	0xFDE
-  2187                           postdec2	equ	0xFDD
-  2188                           plusw2	equ	0xFDB
-  2189                           fsr2h	equ	0xFDA
-  2190                           fsr2l	equ	0xFD9
-  2191                           status	equ	0xFD8
-  2192                           
-  2193                           	psect	rparam
-  2194  0000                     pclatu	equ	0xFFB
-  2195                           pclath	equ	0xFFA
-  2196                           tblptru	equ	0xFF8
-  2197                           tblptrh	equ	0xFF7
-  2198                           tblptrl	equ	0xFF6
-  2199                           tablat	equ	0xFF5
-  2200                           prodh	equ	0xFF4
-  2201                           prodl	equ	0xFF3
-  2202                           intcon	equ	0xFF2
-  2203                           intcon2	equ	0xFF1
-  2204                           postinc0	equ	0xFEE
-  2205                           fsr0h	equ	0xFEA
-  2206                           fsr0l	equ	0xFE9
-  2207                           wreg	equ	0xFE8
-  2208                           plusw1	equ	0xFE3
-  2209                           fsr1h	equ	0xFE2
-  2210                           fsr1l	equ	0xFE1
-  2211                           bsr	equ	0xFE0
-  2212                           indf2	equ	0xFDF
-  2213                           postinc2	equ	0xFDE
-  2214                           postdec2	equ	0xFDD
-  2215                           plusw2	equ	0xFDB
-  2216                           fsr2h	equ	0xFDA
-  2217                           fsr2l	equ	0xFD9
-  2218                           status	equ	0xFD8
-  2219                           
-  2220                           	psect	temp
-  2221  000041                     btemp:
-  2222                           	opt stack 0
-  2223  000041                     	ds	1
-  2224  0000                     int$flags	set	btemp
-  2225                           pclatu	equ	0xFFB
-  2226                           pclath	equ	0xFFA
-  2227                           tblptru	equ	0xFF8
-  2228                           tblptrh	equ	0xFF7
-  2229                           tblptrl	equ	0xFF6
-  2230                           tablat	equ	0xFF5
-  2231                           prodh	equ	0xFF4
-  2232                           prodl	equ	0xFF3
-  2233                           intcon	equ	0xFF2
-  2234                           intcon2	equ	0xFF1
-  2235                           postinc0	equ	0xFEE
-  2236                           fsr0h	equ	0xFEA
-  2237                           fsr0l	equ	0xFE9
-  2238                           wreg	equ	0xFE8
-  2239                           plusw1	equ	0xFE3
-  2240                           fsr1h	equ	0xFE2
-  2241                           fsr1l	equ	0xFE1
-  2242                           bsr	equ	0xFE0
-  2243                           indf2	equ	0xFDF
-  2244                           postinc2	equ	0xFDE
-  2245                           postdec2	equ	0xFDD
-  2246                           plusw2	equ	0xFDB
-  2247                           fsr2h	equ	0xFDA
-  2248                           fsr2l	equ	0xFD9
-  2249                           status	equ	0xFD8
+  1516  000644  D000               	nop2	
+  1517  000646                     l170:
+  1518  000646  5016               	movf	delay@ms,w,c
+  1519  000648  1017               	iorwf	delay@ms+1,w,c
+  1520  00064A  B4D8               	btfsc	status,2,c
+  1521  00064C  0012               	return	
+  1522  00064E  D7F0               	goto	l1229
+  1523  000650                     __end_of_delay:
+  1524                           	opt stack 0
+  1525                           tblptru	equ	0xFF8
+  1526                           prodh	equ	0xFF4
+  1527                           prodl	equ	0xFF3
+  1528                           postinc0	equ	0xFEE
+  1529                           wreg	equ	0xFE8
+  1530                           indf2	equ	0xFDF
+  1531                           fsr2h	equ	0xFDA
+  1532                           fsr2l	equ	0xFD9
+  1533                           status	equ	0xFD8
+  1534                           
+  1535 ;; *************** function _D_SEG_Start *****************
+  1536 ;; Defined at:
+  1537 ;;		line 117 in file "Drivers/SEG_Driver.c"
+  1538 ;; Parameters:    Size  Location     Type
+  1539 ;;		None
+  1540 ;; Auto vars:     Size  Location     Type
+  1541 ;;		None
+  1542 ;; Return value:  Size  Location     Type
+  1543 ;;                  1    wreg      void 
+  1544 ;; Registers used:
+  1545 ;;		None
+  1546 ;; Tracked objects:
+  1547 ;;		On entry : 0/0
+  1548 ;;		On exit  : 0/0
+  1549 ;;		Unchanged: 0/0
+  1550 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1551 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1552 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1553 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1554 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1555 ;;Total ram usage:        0 bytes
+  1556 ;; Hardware stack levels used:    1
+  1557 ;; Hardware stack levels required when called:    3
+  1558 ;; This function calls:
+  1559 ;;		Nothing
+  1560 ;; This function is called by:
+  1561 ;;		_main
+  1562 ;; This function uses a non-reentrant model
+  1563 ;;
+  1564                           
+  1565                           	psect	text10
+  1566  0006D6                     __ptext10:
+  1567                           	opt stack 0
+  1568  0006D6                     _D_SEG_Start:
+  1569                           	opt stack 27
+  1570                           
+  1571                           ;SEG_Driver.c: 119: T0CONbits.TMR0ON = 1;
+  1572                           
+  1573                           ;incstack = 0
+  1574  0006D6  8ED5               	bsf	4053,7,c	;volatile
+  1575  0006D8  0012               	return		;funcret
+  1576  0006DA                     __end_of_D_SEG_Start:
+  1577                           	opt stack 0
+  1578                           tblptru	equ	0xFF8
+  1579                           prodh	equ	0xFF4
+  1580                           prodl	equ	0xFF3
+  1581                           postinc0	equ	0xFEE
+  1582                           wreg	equ	0xFE8
+  1583                           indf2	equ	0xFDF
+  1584                           fsr2h	equ	0xFDA
+  1585                           fsr2l	equ	0xFD9
+  1586                           status	equ	0xFD8
+  1587                           
+  1588 ;; *************** function _D_SEG_Init *****************
+  1589 ;; Defined at:
+  1590 ;;		line 76 in file "Drivers/SEG_Driver.c"
+  1591 ;; Parameters:    Size  Location     Type
+  1592 ;;		None
+  1593 ;; Auto vars:     Size  Location     Type
+  1594 ;;		None
+  1595 ;; Return value:  Size  Location     Type
+  1596 ;;                  1    wreg      void 
+  1597 ;; Registers used:
+  1598 ;;		wreg, status,2
+  1599 ;; Tracked objects:
+  1600 ;;		On entry : 0/0
+  1601 ;;		On exit  : 0/0
+  1602 ;;		Unchanged: 0/0
+  1603 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1604 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1605 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1606 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1607 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1608 ;;Total ram usage:        0 bytes
+  1609 ;; Hardware stack levels used:    1
+  1610 ;; Hardware stack levels required when called:    3
+  1611 ;; This function calls:
+  1612 ;;		Nothing
+  1613 ;; This function is called by:
+  1614 ;;		_main
+  1615 ;; This function uses a non-reentrant model
+  1616 ;;
+  1617                           
+  1618                           	psect	text11
+  1619  000650                     __ptext11:
+  1620                           	opt stack 0
+  1621  000650                     _D_SEG_Init:
+  1622                           	opt stack 27
+  1623                           
+  1624                           ;SEG_Driver.c: 78: segmentCnt = 0;
+  1625                           
+  1626                           ;incstack = 0
+  1627  000650  0E00               	movlw	0
+  1628  000652  6E28               	movwf	_segmentCnt,c
+  1629                           
+  1630                           ;SEG_Driver.c: 79: currentSeg = 0;
+  1631  000654  0E00               	movlw	0
+  1632  000656  6E25               	movwf	_currentSeg,c
+  1633                           
+  1634                           ;SEG_Driver.c: 82: T0CONbits.TMR0ON = 0;
+  1635  000658  9ED5               	bcf	4053,7,c	;volatile
+  1636                           
+  1637                           ;SEG_Driver.c: 83: T0CONbits.T08BIT = 1;
+  1638  00065A  8CD5               	bsf	4053,6,c	;volatile
+  1639                           
+  1640                           ;SEG_Driver.c: 84: T0CONbits.T0CS = 0;
+  1641  00065C  9AD5               	bcf	4053,5,c	;volatile
+  1642                           
+  1643                           ;SEG_Driver.c: 85: T0CONbits.PSA = 0;
+  1644  00065E  96D5               	bcf	4053,3,c	;volatile
+  1645                           
+  1646                           ;SEG_Driver.c: 86: T0CONbits.T0PS = 0b011;
+  1647  000660  50D5               	movf	4053,w,c	;volatile
+  1648  000662  0BF8               	andlw	-8
+  1649  000664  0903               	iorlw	3
+  1650  000666  6ED5               	movwf	4053,c	;volatile
+  1651                           
+  1652                           ;SEG_Driver.c: 89: RCONbits.IPEN = 1;
+  1653  000668  8ED0               	bsf	4048,7,c	;volatile
+  1654                           
+  1655                           ;SEG_Driver.c: 90: INTCONbits.GIEH = 1;
+  1656  00066A  8EF2               	bsf	intcon,7,c	;volatile
+  1657                           
+  1658                           ;SEG_Driver.c: 91: INTCONbits.GIEL = 1;
+  1659  00066C  8CF2               	bsf	intcon,6,c	;volatile
+  1660                           
+  1661                           ;SEG_Driver.c: 93: INTCONbits.TMR0IF = 0;
+  1662  00066E  94F2               	bcf	intcon,2,c	;volatile
+  1663                           
+  1664                           ;SEG_Driver.c: 94: INTCON2bits.TMR0IP = 0;
+  1665  000670  94F1               	bcf	intcon2,2,c	;volatile
+  1666                           
+  1667                           ;SEG_Driver.c: 95: INTCONbits.TMR0IE = 1;
+  1668  000672  8AF2               	bsf	intcon,5,c	;volatile
+  1669  000674  0012               	return		;funcret
+  1670  000676                     __end_of_D_SEG_Init:
+  1671                           	opt stack 0
+  1672                           tblptru	equ	0xFF8
+  1673                           prodh	equ	0xFF4
+  1674                           prodl	equ	0xFF3
+  1675                           intcon	equ	0xFF2
+  1676                           intcon2	equ	0xFF1
+  1677                           postinc0	equ	0xFEE
+  1678                           wreg	equ	0xFE8
+  1679                           indf2	equ	0xFDF
+  1680                           fsr2h	equ	0xFDA
+  1681                           fsr2l	equ	0xFD9
+  1682                           status	equ	0xFD8
+  1683                           
+  1684 ;; *************** function _D_SEG_Add *****************
+  1685 ;; Defined at:
+  1686 ;;		line 98 in file "Drivers/SEG_Driver.c"
+  1687 ;; Parameters:    Size  Location     Type
+  1688 ;;  ID              1    wreg     unsigned char 
+  1689 ;;  port            2   21[COMRAM] PTR volatile unsigned ch
+  1690 ;;		 -> PORTA(1), 
+  1691 ;;  portPin         1   23[COMRAM] unsigned char 
+  1692 ;; Auto vars:     Size  Location     Type
+  1693 ;;  ID              1   25[COMRAM] unsigned char 
+  1694 ;;  temp            6   27[COMRAM] struct .
+  1695 ;;  i               1   26[COMRAM] unsigned char 
+  1696 ;; Return value:  Size  Location     Type
+  1697 ;;                  1    wreg      void 
+  1698 ;; Registers used:
+  1699 ;;		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+  1700 ;; Tracked objects:
+  1701 ;;		On entry : 0/0
+  1702 ;;		On exit  : 0/0
+  1703 ;;		Unchanged: 0/0
+  1704 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1705 ;;      Params:         3       0       0       0       0       0       0       0       0
+  1706 ;;      Locals:         8       0       0       0       0       0       0       0       0
+  1707 ;;      Temps:          1       0       0       0       0       0       0       0       0
+  1708 ;;      Totals:        12       0       0       0       0       0       0       0       0
+  1709 ;;Total ram usage:       12 bytes
+  1710 ;; Hardware stack levels used:    1
+  1711 ;; Hardware stack levels required when called:    3
+  1712 ;; This function calls:
+  1713 ;;		Nothing
+  1714 ;; This function is called by:
+  1715 ;;		_main
+  1716 ;; This function uses a non-reentrant model
+  1717 ;;
+  1718                           
+  1719                           	psect	text12
+  1720  000528                     __ptext12:
+  1721                           	opt stack 0
+  1722  000528                     _D_SEG_Add:
+  1723                           	opt stack 27
+  1724                           
+  1725                           ;incstack = 0
+  1726                           ;D_SEG_Add@ID stored from wreg
+  1727  000528  6E1A               	movwf	D_SEG_Add@ID,c
+  1728                           
+  1729                           ;SEG_Driver.c: 99: if(segmentCnt < 4) {
+  1730  00052A  0E04               	movlw	4
+  1731  00052C  6028               	cpfslt	_segmentCnt,c
+  1732  00052E  0012               	return	
+  1733                           
+  1734                           ;SEG_Driver.c: 100: uint8_t i;
+  1735                           ;SEG_Driver.c: 101: for(i=0; i<segmentCnt; i++) {
+  1736  000530  0E00               	movlw	0
+  1737  000532  6E1B               	movwf	D_SEG_Add@i,c
+  1738  000534  D00D               	goto	l1243
+  1739  000536                     l1237:
+  1740                           
+  1741                           ;SEG_Driver.c: 102: if(segments[i].ID == ID) return;
+  1742  000536  501B               	movf	D_SEG_Add@i,w,c
+  1743  000538  0D06               	mullw	6
+  1744  00053A  0E29               	movlw	low _segments
+  1745  00053C  24F3               	addwf	prodl,w,c
+  1746  00053E  6ED9               	movwf	fsr2l,c
+  1747  000540  0E00               	movlw	high _segments
+  1748  000542  20F4               	addwfc	prodh,w,c
+  1749  000544  6EDA               	movwf	fsr2h,c
+  1750  000546  501A               	movf	D_SEG_Add@ID,w,c
+  1751  000548  18DE               	xorwf	postinc2,w,c
+  1752  00054A  B4D8               	btfsc	status,2,c
+  1753  00054C  0012               	return	
+  1754  00054E  2A1B               	incf	D_SEG_Add@i,f,c
+  1755  000550                     l1243:
+  1756  000550  5028               	movf	_segmentCnt,w,c
+  1757  000552  5C1B               	subwf	D_SEG_Add@i,w,c
+  1758  000554  A0D8               	btfss	status,0,c
+  1759  000556  D7EF               	goto	l1237
+  1760                           
+  1761                           ;SEG_Driver.c: 103: }
+  1762                           ;SEG_Driver.c: 105: SEG_Segment temp;
+  1763                           ;SEG_Driver.c: 106: temp.ID = segmentCnt;
+  1764  000558  C028  F01C         	movff	_segmentCnt,D_SEG_Add@temp
+  1765                           
+  1766                           ;SEG_Driver.c: 107: temp.PORT = port;
+  1767  00055C  C016  F01D         	movff	D_SEG_Add@port,D_SEG_Add@temp+1
+  1768  000560  C017  F01E         	movff	D_SEG_Add@port+1,D_SEG_Add@temp+2
+  1769                           
+  1770                           ;SEG_Driver.c: 108: temp.portBit = portPin;
+  1771  000564  C018  F01F         	movff	D_SEG_Add@portPin,D_SEG_Add@temp+3
+  1772                           
+  1773                           ;SEG_Driver.c: 109: temp.value = 0;
+  1774  000568  0E00               	movlw	0
+  1775  00056A  6E20               	movwf	D_SEG_Add@temp+4,c
+  1776                           
+  1777                           ;SEG_Driver.c: 110: temp.converted = 0;
+  1778  00056C  0E00               	movlw	0
+  1779  00056E  6E21               	movwf	D_SEG_Add@temp+5,c
+  1780                           
+  1781                           ;SEG_Driver.c: 111: segments[segmentCnt] = temp;
+  1782  000570  EE20  F01C         	lfsr	2,D_SEG_Add@temp
+  1783  000574  5028               	movf	_segmentCnt,w,c
+  1784  000576  0D06               	mullw	6
+  1785  000578  0E29               	movlw	low _segments
+  1786  00057A  24F3               	addwf	prodl,w,c
+  1787  00057C  6EE1               	movwf	fsr1l,c
+  1788  00057E  0E00               	movlw	high _segments
+  1789  000580  20F4               	addwfc	prodh,w,c
+  1790  000582  6EE2               	movwf	fsr1h,c
+  1791  000584  0E05               	movlw	5
+  1792  000586                     u521:
+  1793  000586  CFDB FFE3          	movff	plusw2,plusw1
+  1794  00058A  06E8               	decf	wreg,f,c
+  1795  00058C  E2FC               	bc	u521
+  1796                           
+  1797                           ;SEG_Driver.c: 113: segmentCnt++;
+  1798  00058E  2A28               	incf	_segmentCnt,f,c
+  1799  000590  0012               	return	
+  1800  000592                     __end_of_D_SEG_Add:
+  1801                           	opt stack 0
+  1802                           tblptru	equ	0xFF8
+  1803                           prodh	equ	0xFF4
+  1804                           prodl	equ	0xFF3
+  1805                           intcon	equ	0xFF2
+  1806                           intcon2	equ	0xFF1
+  1807                           postinc0	equ	0xFEE
+  1808                           wreg	equ	0xFE8
+  1809                           plusw1	equ	0xFE3
+  1810                           fsr1h	equ	0xFE2
+  1811                           fsr1l	equ	0xFE1
+  1812                           indf2	equ	0xFDF
+  1813                           postinc2	equ	0xFDE
+  1814                           plusw2	equ	0xFDB
+  1815                           fsr2h	equ	0xFDA
+  1816                           fsr2l	equ	0xFD9
+  1817                           status	equ	0xFD8
+  1818                           
+  1819 ;; *************** function _LowInterruptRoutine *****************
+  1820 ;; Defined at:
+  1821 ;;		line 138 in file "Drivers/SEG_Driver.c"
+  1822 ;; Parameters:    Size  Location     Type
+  1823 ;;		None
+  1824 ;; Auto vars:     Size  Location     Type
+  1825 ;;		None
+  1826 ;; Return value:  Size  Location     Type
+  1827 ;;                  1    wreg      void 
+  1828 ;; Registers used:
+  1829 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+  1830 ;; Tracked objects:
+  1831 ;;		On entry : 0/0
+  1832 ;;		On exit  : 0/0
+  1833 ;;		Unchanged: 0/0
+  1834 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1835 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1836 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1837 ;;      Temps:         18       0       0       0       0       0       0       0       0
+  1838 ;;      Totals:        18       0       0       0       0       0       0       0       0
+  1839 ;;Total ram usage:       18 bytes
+  1840 ;; Hardware stack levels used:    1
+  1841 ;; Hardware stack levels required when called:    2
+  1842 ;; This function calls:
+  1843 ;;		_writeSegment
+  1844 ;; This function is called by:
+  1845 ;;		Interrupt level 1
+  1846 ;; This function uses a non-reentrant model
+  1847 ;;
+  1848                           
+  1849                           	psect	intcodelo
+  1850  000018                     __pintcodelo:
+  1851                           	opt stack 0
+  1852  000018                     _LowInterruptRoutine:
+  1853                           	opt stack 24
+  1854                           
+  1855                           ;incstack = 0
+  1856  000018  8041               	bsf	btemp,0,c	;set compiler interrupt flag (level 1)
+  1857  00001A  CFD8 F005          	movff	status,??_LowInterruptRoutine+1
+  1858  00001E  CFE8 F006          	movff	wreg,??_LowInterruptRoutine+2
+  1859  000022  CFE0 F007          	movff	bsr,??_LowInterruptRoutine+3
+  1860  000026  CFFA F008          	movff	pclath,??_LowInterruptRoutine+4
+  1861  00002A  CFFB F009          	movff	pclatu,??_LowInterruptRoutine+5
+  1862  00002E  CFE9 F00A          	movff	fsr0l,??_LowInterruptRoutine+6
+  1863  000032  CFEA F00B          	movff	fsr0h,??_LowInterruptRoutine+7
+  1864  000036  CFE1 F00C          	movff	fsr1l,??_LowInterruptRoutine+8
+  1865  00003A  CFE2 F00D          	movff	fsr1h,??_LowInterruptRoutine+9
+  1866  00003E  CFD9 F00E          	movff	fsr2l,??_LowInterruptRoutine+10
+  1867  000042  CFDA F00F          	movff	fsr2h,??_LowInterruptRoutine+11
+  1868  000046  CFF3 F010          	movff	prodl,??_LowInterruptRoutine+12
+  1869  00004A  CFF4 F011          	movff	prodh,??_LowInterruptRoutine+13
+  1870  00004E  CFF6 F012          	movff	tblptrl,??_LowInterruptRoutine+14
+  1871  000052  CFF7 F013          	movff	tblptrh,??_LowInterruptRoutine+15
+  1872  000056  CFF8 F014          	movff	tblptru,??_LowInterruptRoutine+16
+  1873  00005A  CFF5 F015          	movff	tablat,??_LowInterruptRoutine+17
+  1874                           
+  1875                           ;SEG_Driver.c: 139: if(INTCONbits.T0IF) {
+  1876  00005E  A4F2               	btfss	intcon,2,c	;volatile
+  1877  000060  D00E               	goto	i1l70
+  1878                           
+  1879                           ;SEG_Driver.c: 140: PORTAbits.RA0 = !PORTAbits.RA0;
+  1880  000062  B080               	btfsc	3968,0,c	;volatile
+  1881  000064  D003               	goto	i1u32_20
+  1882  000066  6A04               	clrf	??_LowInterruptRoutine& (0+255),c
+  1883  000068  2A04               	incf	??_LowInterruptRoutine& (0+255),f,c
+  1884  00006A  D001               	goto	i1u33_28
+  1885  00006C                     i1u32_20:
+  1886  00006C  6A04               	clrf	??_LowInterruptRoutine& (0+255),c
+  1887  00006E                     i1u33_28:
+  1888  00006E  5080               	movf	3968,w,c	;volatile
+  1889  000070  1804               	xorwf	??_LowInterruptRoutine,w,c
+  1890  000072  0BFE               	andlw	-2
+  1891  000074  1804               	xorwf	??_LowInterruptRoutine,w,c
+  1892  000076  6E80               	movwf	3968,c	;volatile
+  1893                           
+  1894                           ;SEG_Driver.c: 142: writeSegment();
+  1895  000078  EC4D  F003         	call	_writeSegment	;wreg free
+  1896                           
+  1897                           ;SEG_Driver.c: 143: INTCONbits.T0IF = 0;
+  1898  00007C  94F2               	bcf	intcon,2,c	;volatile
+  1899  00007E                     i1l70:
+  1900  00007E  C015  FFF5         	movff	??_LowInterruptRoutine+17,tablat
+  1901  000082  C014  FFF8         	movff	??_LowInterruptRoutine+16,tblptru
+  1902  000086  C013  FFF7         	movff	??_LowInterruptRoutine+15,tblptrh
+  1903  00008A  C012  FFF6         	movff	??_LowInterruptRoutine+14,tblptrl
+  1904  00008E  C011  FFF4         	movff	??_LowInterruptRoutine+13,prodh
+  1905  000092  C010  FFF3         	movff	??_LowInterruptRoutine+12,prodl
+  1906  000096  C00F  FFDA         	movff	??_LowInterruptRoutine+11,fsr2h
+  1907  00009A  C00E  FFD9         	movff	??_LowInterruptRoutine+10,fsr2l
+  1908  00009E  C00D  FFE2         	movff	??_LowInterruptRoutine+9,fsr1h
+  1909  0000A2  C00C  FFE1         	movff	??_LowInterruptRoutine+8,fsr1l
+  1910  0000A6  C00B  FFEA         	movff	??_LowInterruptRoutine+7,fsr0h
+  1911  0000AA  C00A  FFE9         	movff	??_LowInterruptRoutine+6,fsr0l
+  1912  0000AE  C009  FFFB         	movff	??_LowInterruptRoutine+5,pclatu
+  1913  0000B2  C008  FFFA         	movff	??_LowInterruptRoutine+4,pclath
+  1914  0000B6  C007  FFE0         	movff	??_LowInterruptRoutine+3,bsr
+  1915  0000BA  C006  FFE8         	movff	??_LowInterruptRoutine+2,wreg
+  1916  0000BE  C005  FFD8         	movff	??_LowInterruptRoutine+1,status
+  1917  0000C2  9041               	bcf	btemp,0,c	;clear compiler interrupt flag (level 1)
+  1918  0000C4  0010               	retfie	
+  1919  0000C6                     __end_of_LowInterruptRoutine:
+  1920                           	opt stack 0
+  1921                           pclatu	equ	0xFFB
+  1922                           pclath	equ	0xFFA
+  1923                           tblptru	equ	0xFF8
+  1924                           tblptrh	equ	0xFF7
+  1925                           tblptrl	equ	0xFF6
+  1926                           tablat	equ	0xFF5
+  1927                           prodh	equ	0xFF4
+  1928                           prodl	equ	0xFF3
+  1929                           intcon	equ	0xFF2
+  1930                           intcon2	equ	0xFF1
+  1931                           postinc0	equ	0xFEE
+  1932                           fsr0h	equ	0xFEA
+  1933                           fsr0l	equ	0xFE9
+  1934                           wreg	equ	0xFE8
+  1935                           plusw1	equ	0xFE3
+  1936                           fsr1h	equ	0xFE2
+  1937                           fsr1l	equ	0xFE1
+  1938                           bsr	equ	0xFE0
+  1939                           indf2	equ	0xFDF
+  1940                           postinc2	equ	0xFDE
+  1941                           plusw2	equ	0xFDB
+  1942                           fsr2h	equ	0xFDA
+  1943                           fsr2l	equ	0xFD9
+  1944                           status	equ	0xFD8
+  1945                           
+  1946 ;; *************** function _writeSegment *****************
+  1947 ;; Defined at:
+  1948 ;;		line 68 in file "Drivers/SEG_Driver.c"
+  1949 ;; Parameters:    Size  Location     Type
+  1950 ;;		None
+  1951 ;; Auto vars:     Size  Location     Type
+  1952 ;;		None
+  1953 ;; Return value:  Size  Location     Type
+  1954 ;;                  1    wreg      void 
+  1955 ;; Registers used:
+  1956 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh, cstack
+  1957 ;; Tracked objects:
+  1958 ;;		On entry : 0/0
+  1959 ;;		On exit  : 0/0
+  1960 ;;		Unchanged: 0/0
+  1961 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  1962 ;;      Params:         0       0       0       0       0       0       0       0       0
+  1963 ;;      Locals:         0       0       0       0       0       0       0       0       0
+  1964 ;;      Temps:          0       0       0       0       0       0       0       0       0
+  1965 ;;      Totals:         0       0       0       0       0       0       0       0       0
+  1966 ;;Total ram usage:        0 bytes
+  1967 ;; Hardware stack levels used:    1
+  1968 ;; Hardware stack levels required when called:    1
+  1969 ;; This function calls:
+  1970 ;;		_selectNextSegment
+  1971 ;; This function is called by:
+  1972 ;;		_LowInterruptRoutine
+  1973 ;; This function uses a non-reentrant model
+  1974 ;;
+  1975                           
+  1976                           	psect	text14
+  1977  00069A                     __ptext14:
+  1978                           	opt stack 0
+  1979  00069A                     _writeSegment:
+  1980                           	opt stack 24
+  1981                           
+  1982                           ;SEG_Driver.c: 69: selectNextSegment();
+  1983                           
+  1984                           ;incstack = 0
+  1985  00069A  EC21  F002         	call	_selectNextSegment	;wreg free
+  1986                           
+  1987                           ;SEG_Driver.c: 70: PORTB = segments[currentSeg].converted;
+  1988  00069E  5025               	movf	_currentSeg,w,c
+  1989  0006A0  0D06               	mullw	6
+  1990  0006A2  0E05               	movlw	5
+  1991  0006A4  26F3               	addwf	prodl,f,c
+  1992  0006A6  0E00               	movlw	0
+  1993  0006A8  22F4               	addwfc	prodh,f,c
+  1994  0006AA  0E29               	movlw	low _segments
+  1995  0006AC  24F3               	addwf	prodl,w,c
+  1996  0006AE  6ED9               	movwf	fsr2l,c
+  1997  0006B0  0E00               	movlw	high _segments
+  1998  0006B2  20F4               	addwfc	prodh,w,c
+  1999  0006B4  6EDA               	movwf	fsr2h,c
+  2000  0006B6  50DF               	movf	indf2,w,c
+  2001  0006B8  6E81               	movwf	3969,c	;volatile
+  2002  0006BA  0012               	return		;funcret
+  2003  0006BC                     __end_of_writeSegment:
+  2004                           	opt stack 0
+  2005                           pclatu	equ	0xFFB
+  2006                           pclath	equ	0xFFA
+  2007                           tblptru	equ	0xFF8
+  2008                           tblptrh	equ	0xFF7
+  2009                           tblptrl	equ	0xFF6
+  2010                           tablat	equ	0xFF5
+  2011                           prodh	equ	0xFF4
+  2012                           prodl	equ	0xFF3
+  2013                           intcon	equ	0xFF2
+  2014                           intcon2	equ	0xFF1
+  2015                           postinc0	equ	0xFEE
+  2016                           fsr0h	equ	0xFEA
+  2017                           fsr0l	equ	0xFE9
+  2018                           wreg	equ	0xFE8
+  2019                           plusw1	equ	0xFE3
+  2020                           fsr1h	equ	0xFE2
+  2021                           fsr1l	equ	0xFE1
+  2022                           bsr	equ	0xFE0
+  2023                           indf2	equ	0xFDF
+  2024                           postinc2	equ	0xFDE
+  2025                           plusw2	equ	0xFDB
+  2026                           fsr2h	equ	0xFDA
+  2027                           fsr2l	equ	0xFD9
+  2028                           status	equ	0xFD8
+  2029                           
+  2030 ;; *************** function _selectNextSegment *****************
+  2031 ;; Defined at:
+  2032 ;;		line 32 in file "Drivers/SEG_Driver.c"
+  2033 ;; Parameters:    Size  Location     Type
+  2034 ;;		None
+  2035 ;; Auto vars:     Size  Location     Type
+  2036 ;;  select          1    2[COMRAM] unsigned char 
+  2037 ;; Return value:  Size  Location     Type
+  2038 ;;                  1    wreg      void 
+  2039 ;; Registers used:
+  2040 ;;		wreg, fsr2l, fsr2h, status,2, status,0, prodl, prodh
+  2041 ;; Tracked objects:
+  2042 ;;		On entry : 0/0
+  2043 ;;		On exit  : 0/0
+  2044 ;;		Unchanged: 0/0
+  2045 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+  2046 ;;      Params:         0       0       0       0       0       0       0       0       0
+  2047 ;;      Locals:         1       0       0       0       0       0       0       0       0
+  2048 ;;      Temps:          2       0       0       0       0       0       0       0       0
+  2049 ;;      Totals:         3       0       0       0       0       0       0       0       0
+  2050 ;;Total ram usage:        3 bytes
+  2051 ;; Hardware stack levels used:    1
+  2052 ;; This function calls:
+  2053 ;;		Nothing
+  2054 ;; This function is called by:
+  2055 ;;		_writeSegment
+  2056 ;; This function uses a non-reentrant model
+  2057 ;;
+  2058                           
+  2059                           	psect	text15
+  2060  000442                     __ptext15:
+  2061                           	opt stack 0
+  2062  000442                     _selectNextSegment:
+  2063                           	opt stack 24
+  2064                           
+  2065                           ;SEG_Driver.c: 33: if(segmentCnt > 0) {
+  2066                           
+  2067                           ;incstack = 0
+  2068  000442  5028               	movf	_segmentCnt,w,c
+  2069  000444  B4D8               	btfsc	status,2,c
+  2070  000446  0012               	return	
+  2071                           
+  2072                           ;SEG_Driver.c: 37: if(currentSeg == segmentCnt) {
+  2073  000448  5028               	movf	_segmentCnt,w,c
+  2074  00044A  1825               	xorwf	_currentSeg,w,c
+  2075  00044C  A4D8               	btfss	status,2,c
+  2076  00044E  D003               	goto	i1l905
+  2077                           
+  2078                           ;SEG_Driver.c: 38: currentSeg = 0;
+  2079  000450  0E00               	movlw	0
+  2080  000452  6E25               	movwf	_currentSeg,c
+  2081                           
+  2082                           ;SEG_Driver.c: 39: } else {
+  2083  000454  D001               	goto	i1l907
+  2084  000456                     i1l905:
+  2085                           
+  2086                           ;SEG_Driver.c: 40: currentSeg++;
+  2087  000456  2A25               	incf	_currentSeg,f,c
+  2088  000458                     i1l907:
+  2089                           
+  2090                           ;SEG_Driver.c: 41: }
+  2091                           ;SEG_Driver.c: 42: uint8_t select = 0xFF;
+  2092  000458  6803               	setf	selectNextSegment@select,c
+  2093                           
+  2094                           ;SEG_Driver.c: 43: select &= (1 << segments[currentSeg].portBit);
+  2095  00045A  5025               	movf	_currentSeg,w,c
+  2096  00045C  0D06               	mullw	6
+  2097  00045E  0E03               	movlw	3
+  2098  000460  26F3               	addwf	prodl,f,c
+  2099  000462  0E00               	movlw	0
+  2100  000464  22F4               	addwfc	prodh,f,c
+  2101  000466  0E29               	movlw	low _segments
+  2102  000468  24F3               	addwf	prodl,w,c
+  2103  00046A  6ED9               	movwf	fsr2l,c
+  2104  00046C  0E00               	movlw	high _segments
+  2105  00046E  20F4               	addwfc	prodh,w,c
+  2106  000470  6EDA               	movwf	fsr2h,c
+  2107  000472  50DF               	movf	indf2,w,c
+  2108  000474  6E01               	movwf	??_selectNextSegment& (0+255),c
+  2109  000476  0E01               	movlw	1
+  2110  000478  6E02               	movwf	(??_selectNextSegment+1)& (0+255),c
+  2111  00047A  2A01               	incf	??_selectNextSegment,f,c
+  2112  00047C  D002               	goto	i1u17_24
+  2113  00047E                     i1u17_25:
+  2114  00047E  90D8               	bcf	status,0,c
+  2115  000480  3602               	rlcf	??_selectNextSegment+1,f,c
+  2116  000482                     i1u17_24:
+  2117  000482  2E01               	decfsz	??_selectNextSegment,f,c
+  2118  000484  D7FC               	goto	i1u17_25
+  2119  000486  5002               	movf	??_selectNextSegment+1,w,c
+  2120  000488  1603               	andwf	selectNextSegment@select,f,c
+  2121                           
+  2122                           ;SEG_Driver.c: 44: *segments[currentSeg].PORT = select;
+  2123  00048A  5025               	movf	_currentSeg,w,c
+  2124  00048C  0D06               	mullw	6
+  2125  00048E  0E01               	movlw	1
+  2126  000490  26F3               	addwf	prodl,f,c
+  2127  000492  0E00               	movlw	0
+  2128  000494  22F4               	addwfc	prodh,f,c
+  2129  000496  0E29               	movlw	low _segments
+  2130  000498  24F3               	addwf	prodl,w,c
+  2131  00049A  6ED9               	movwf	fsr2l,c
+  2132  00049C  0E00               	movlw	high _segments
+  2133  00049E  20F4               	addwfc	prodh,w,c
+  2134  0004A0  6EDA               	movwf	fsr2h,c
+  2135  0004A2  CFDE F001          	movff	postinc2,??_selectNextSegment
+  2136  0004A6  CFDD F002          	movff	postdec2,??_selectNextSegment+1
+  2137  0004AA  C001  FFD9         	movff	??_selectNextSegment,fsr2l
+  2138  0004AE  C002  FFDA         	movff	??_selectNextSegment+1,fsr2h
+  2139  0004B2  C003  FFDF         	movff	selectNextSegment@select,indf2
+  2140  0004B6  0012               	return	
+  2141  0004B8                     __end_of_selectNextSegment:
+  2142                           	opt stack 0
+  2143  0000                     pclatu	equ	0xFFB
+  2144                           pclath	equ	0xFFA
+  2145                           tblptru	equ	0xFF8
+  2146                           tblptrh	equ	0xFF7
+  2147                           tblptrl	equ	0xFF6
+  2148                           tablat	equ	0xFF5
+  2149                           prodh	equ	0xFF4
+  2150                           prodl	equ	0xFF3
+  2151                           intcon	equ	0xFF2
+  2152                           intcon2	equ	0xFF1
+  2153                           postinc0	equ	0xFEE
+  2154                           fsr0h	equ	0xFEA
+  2155                           fsr0l	equ	0xFE9
+  2156                           wreg	equ	0xFE8
+  2157                           plusw1	equ	0xFE3
+  2158                           fsr1h	equ	0xFE2
+  2159                           fsr1l	equ	0xFE1
+  2160                           bsr	equ	0xFE0
+  2161                           indf2	equ	0xFDF
+  2162                           postinc2	equ	0xFDE
+  2163                           postdec2	equ	0xFDD
+  2164                           plusw2	equ	0xFDB
+  2165                           fsr2h	equ	0xFDA
+  2166                           fsr2l	equ	0xFD9
+  2167                           status	equ	0xFD8
+  2168                           pclatu	equ	0xFFB
+  2169                           pclath	equ	0xFFA
+  2170                           tblptru	equ	0xFF8
+  2171                           tblptrh	equ	0xFF7
+  2172                           tblptrl	equ	0xFF6
+  2173                           tablat	equ	0xFF5
+  2174                           prodh	equ	0xFF4
+  2175                           prodl	equ	0xFF3
+  2176                           intcon	equ	0xFF2
+  2177                           intcon2	equ	0xFF1
+  2178                           postinc0	equ	0xFEE
+  2179                           fsr0h	equ	0xFEA
+  2180                           fsr0l	equ	0xFE9
+  2181                           wreg	equ	0xFE8
+  2182                           plusw1	equ	0xFE3
+  2183                           fsr1h	equ	0xFE2
+  2184                           fsr1l	equ	0xFE1
+  2185                           bsr	equ	0xFE0
+  2186                           indf2	equ	0xFDF
+  2187                           postinc2	equ	0xFDE
+  2188                           postdec2	equ	0xFDD
+  2189                           plusw2	equ	0xFDB
+  2190                           fsr2h	equ	0xFDA
+  2191                           fsr2l	equ	0xFD9
+  2192                           status	equ	0xFD8
+  2193                           
+  2194                           	psect	rparam
+  2195  0000                     pclatu	equ	0xFFB
+  2196                           pclath	equ	0xFFA
+  2197                           tblptru	equ	0xFF8
+  2198                           tblptrh	equ	0xFF7
+  2199                           tblptrl	equ	0xFF6
+  2200                           tablat	equ	0xFF5
+  2201                           prodh	equ	0xFF4
+  2202                           prodl	equ	0xFF3
+  2203                           intcon	equ	0xFF2
+  2204                           intcon2	equ	0xFF1
+  2205                           postinc0	equ	0xFEE
+  2206                           fsr0h	equ	0xFEA
+  2207                           fsr0l	equ	0xFE9
+  2208                           wreg	equ	0xFE8
+  2209                           plusw1	equ	0xFE3
+  2210                           fsr1h	equ	0xFE2
+  2211                           fsr1l	equ	0xFE1
+  2212                           bsr	equ	0xFE0
+  2213                           indf2	equ	0xFDF
+  2214                           postinc2	equ	0xFDE
+  2215                           postdec2	equ	0xFDD
+  2216                           plusw2	equ	0xFDB
+  2217                           fsr2h	equ	0xFDA
+  2218                           fsr2l	equ	0xFD9
+  2219                           status	equ	0xFD8
+  2220                           
+  2221                           	psect	temp
+  2222  000041                     btemp:
+  2223                           	opt stack 0
+  2224  000041                     	ds	1
+  2225  0000                     int$flags	set	btemp
+  2226                           pclatu	equ	0xFFB
+  2227                           pclath	equ	0xFFA
+  2228                           tblptru	equ	0xFF8
+  2229                           tblptrh	equ	0xFF7
+  2230                           tblptrl	equ	0xFF6
+  2231                           tablat	equ	0xFF5
+  2232                           prodh	equ	0xFF4
+  2233                           prodl	equ	0xFF3
+  2234                           intcon	equ	0xFF2
+  2235                           intcon2	equ	0xFF1
+  2236                           postinc0	equ	0xFEE
+  2237                           fsr0h	equ	0xFEA
+  2238                           fsr0l	equ	0xFE9
+  2239                           wreg	equ	0xFE8
+  2240                           plusw1	equ	0xFE3
+  2241                           fsr1h	equ	0xFE2
+  2242                           fsr1l	equ	0xFE1
+  2243                           bsr	equ	0xFE0
+  2244                           indf2	equ	0xFDF
+  2245                           postinc2	equ	0xFDE
+  2246                           postdec2	equ	0xFDD
+  2247                           plusw2	equ	0xFDB
+  2248                           fsr2h	equ	0xFDA
+  2249                           fsr2l	equ	0xFD9
+  2250                           status	equ	0xFD8
 
 
 Data Sizes:
@@ -2502,12 +2503,12 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.37 build -260352376 
-Symbol Table                                                                                   Mon Oct  3 21:03:00 2016
+Symbol Table                                                                                   Sat Nov 19 12:24:08 2016
 
                             l27 00D0      __size_of_selectNextSegment 0076                    ___awdiv@sign 001B  
                    __CFG_BOR$ON 000000                              bsr 000FE0                     __CFG_BORV$3 000000  
                   __CFG_CP0$OFF 000000                    __CFG_CP1$OFF 000000                    __CFG_CP2$OFF 000000  
-                  __CFG_CP3$OFF 000000                             l150 060E                             l170 0644  
+                  __CFG_CP3$OFF 000000                             l150 060E                             l170 0646  
                   __CFG_CPB$OFF 000000                             u521 0586                    __CFG_CPD$OFF 000000  
                            u577 063C                    ___awmod@sign 001B                             prod 000FF3  
                            wreg 000FE8                    __CFG_FOSC$HS 000000                    __CFG_LVP$OFF 000000  
@@ -2549,54 +2550,54 @@ Symbol Table                                                                    
                 __CFG_EBTRB$OFF 000000                           _delay 0626                    ?_D_SEG_Start 0001  
                          tablat 000FF5                           plusw1 000FE3                           plusw2 000FDB  
                          status 000FD8     __end_of_LowInterruptRoutine 00C6           __size_of_writeSegment 0022  
-               __initialization 06BA                    __end_of_main 02BA                          ??_main 0024  
+               __initialization 06BC                    __end_of_main 02BA                          ??_main 0024  
                  __activetblptr 000002             __size_of_D_SEG_Init 0026                 __CFG_CCP2MX$OFF 000000  
                   ?_setSegments 0020                          ?_delay 0016                ___awdiv@dividend 0016  
-             __end_of_D_SEG_Add 0592                    _writeSegment 0698                  __CFG_XINST$OFF 000000  
+             __end_of_D_SEG_Add 0592                    _writeSegment 069A                  __CFG_XINST$OFF 000000  
                      ??___awdiv 001A                       ??___awmod 001A                          _change 0024  
-                        delay@i 0019                          clear_0 06C0                ___awdiv@quotient 001C  
+                        delay@i 0019                          clear_0 06C2                ___awdiv@quotient 001C  
                ___awmod@divisor 0018                 ___awmod@counter 001A                   ?_D_SEG_Update 001E  
                         tblptrh 000FF7                          tblptrl 000FF6                          tblptru 000FF8  
                _determineWinner 0592                     D_SEG_Add@ID 001A                      __accesstop 0060  
-       __end_of__initialization 06C6                 __CFG_PBADEN$OFF 000000                   ___rparam_used 000001  
-                  ?_updateScore 0022                  __pcstackCOMRAM 0001                   __end_of_delay 064E  
+       __end_of__initialization 06C8                 __CFG_PBADEN$OFF 000000                   ___rparam_used 000001  
+                  ?_updateScore 0022                  __pcstackCOMRAM 0001                   __end_of_delay 0650  
                 ??_D_SEG_Update 001F                         ??_delay 0018                    ??_D_SEG_Init 0016  
           __size_of_D_SEG_Start 0004         ??_convertValueToSegment 0019         __end_of_determineWinner 05FA  
-            __end_of_D_SEG_Init 0674                         i1u32_20 006C                         i1u17_24 0482  
+            __end_of_D_SEG_Init 0676                         i1u32_20 006C                         i1u17_24 0482  
                        i1u17_25 047E                         i1u33_28 006E            __size_of_setSegments 0088  
                __CFG_VREGEN$OFF 000000                         __Hparam 0000                         __Lparam 0000  
                        ___awdiv 0342                         ___awmod 04B8                      _currentSeg 0025  
-               __CFG_STVREN$OFF 000000                         __pcinit 06BA                         __ramtop 0800  
+               __CFG_STVREN$OFF 000000                         __pcinit 06BC                         __ramtop 0800  
                  ??_checkInputs 001B                         __ptext0 01CC                         __ptext1 03C6  
                        __ptext2 02BA                         __ptext3 04B8                         __ptext4 0342  
-                       __ptext5 0674                         __ptext6 00CA                         __ptext7 0592  
+                       __ptext5 0676                         __ptext6 00CA                         __ptext7 0592  
                        __ptext8 05FA                         __ptext9 0626                       _T0CONbits 000FD5  
              D_SEG_Update@value 001E               D_SEG_Update@which 001F                         delay@ms 0016  
               ___awmod@dividend 0016                         _score_1 0026                         _score_2 0027  
-          end_of_initialization 06C6                      _segmentCnt 0028                   __Lmediumconst 0000  
-          __end_of_D_SEG_Update 0698                       _D_SEG_Add 0528                         postdec2 000FDD  
+          end_of_initialization 06C8                      _segmentCnt 0028                   __Lmediumconst 0000  
+          __end_of_D_SEG_Update 069A                       _D_SEG_Add 0528                         postdec2 000FDD  
                        postinc0 000FEE                         postinc2 000FDE            __size_of_updateScore 007C  
   __size_of_LowInterruptRoutine 00AE                       _PORTAbits 000F80                ?_determineWinner 0001  
                      _TRISAbits 000F92             __end_of_checkInputs 0626                  updateScore@how 0022  
   convertValueToSegment@segment 0016                      ?_D_SEG_Add 0016         selectNextSegment@select 0003  
-           start_initialization 06BA  __size_of_convertValueToSegment 0102   __end_of_convertValueToSegment 01CC  
+           start_initialization 06BC  __size_of_convertValueToSegment 0102   __end_of_convertValueToSegment 01CC  
               __CFG_LPT1OSC$OFF 000000                     _checkInputs 05FA                      D_SEG_Add@i 001B  
                    __pbssCOMRAM 0024           __size_of_D_SEG_Update 0024                   ??_D_SEG_Start 0016  
                    ??_D_SEG_Add 0019                        ?___awdiv 0016                        ?___awmod 0016  
-                   __pintcodelo 0018                    _D_SEG_Update 0674                   ??_setSegments 0021  
-                __size_of_delay 0028                   ?_writeSegment 0001             _LowInterruptRoutine 0018  
-              D_SEG_Add@portPin 0018             __end_of_D_SEG_Start 06D8                        _RCONbits 000FD0  
+                   __pintcodelo 0018                    _D_SEG_Update 0676                   ??_setSegments 0021  
+                __size_of_delay 002A                   ?_writeSegment 0001             _LowInterruptRoutine 0018  
+              D_SEG_Add@portPin 0018             __end_of_D_SEG_Start 06DA                        _RCONbits 000FD0  
               __CFG_WDTPS$32768 000000            ?_LowInterruptRoutine 0001                      _ADCON1bits 000FC1  
                    _INTCON2bits 000FF1                  ??_writeSegment 0004             __end_of_setSegments 0342  
                  ??_updateScore 0023                        __Hrparam 0000                        __Lrparam 0000  
              setSegments@player 0021           ??_LowInterruptRoutine 0004                __size_of___awdiv 0084  
               __size_of___awmod 0070               _selectNextSegment 0442              ?_selectNextSegment 0001  
-                      __ptext10 06D4                        __ptext11 064E                        __ptext12 0528  
-                      __ptext14 0698                        __ptext15 0442        __size_of_determineWinner 0068  
-           ??_selectNextSegment 0001                     _D_SEG_Start 06D4                   __size_of_main 00EE  
+                      __ptext10 06D6                        __ptext11 0650                        __ptext12 0528  
+                      __ptext14 069A                        __ptext15 0442        __size_of_determineWinner 0068  
+           ??_selectNextSegment 0001                     _D_SEG_Start 06D6                   __size_of_main 00EE  
                       _segments 0029                        int$flags 0041       __end_of_selectNextSegment 04B8  
            __end_of_updateScore 0442                    ?_checkInputs 0001           __CFG_CPUDIV$OSC1_PLL2 000000  
                     _INTCONbits 000FF2                     _setSegments 02BA                setSegments@value 0020  
-                      intlevel1 0000                      _D_SEG_Init 064E           _convertValueToSegment 00CA  
-          __end_of_writeSegment 06BA                   D_SEG_Add@temp 001C                   D_SEG_Add@port 0016  
+                      intlevel1 0000                      _D_SEG_Init 0650           _convertValueToSegment 00CA  
+          __end_of_writeSegment 06BC                   D_SEG_Add@temp 001C                   D_SEG_Add@port 0016  
              ??_determineWinner 0016                     _updateScore 03C6  

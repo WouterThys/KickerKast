@@ -12,7 +12,7 @@
 #include "Drivers/PORT_Driver.h"
 #include "Drivers/SEG_Driver.h"
 
-#define _XTAL_FREQ 10000000
+#define _XTAL_FREQ 16000000
 
 #define PLAYER_0 0x00
 #define PLAYER_1 0x01

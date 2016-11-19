@@ -1,4 +1,4 @@
-update=Sat 08 Oct 2016 09:39:19 PM CEST
+update=Fri 18 Nov 2016 06:34:37 PM CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,13 @@ LibName28=contrib
 LibName29=valves
 LibName30=/home/wouter/Documents/kicad/myLib/pcm175x
 LibName31=/home/wouter/Documents/kicad/myLib/uda1361ts
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
