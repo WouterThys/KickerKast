@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name KickerKast-rescue)(type Legacy)(uri ${KIPRJMOD}/KickerKast-rescue.lib)(options "")(descr ""))
+)

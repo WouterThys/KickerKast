@@ -1,37 +1,6 @@
-EESchema Schematic File Version 2
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:pcm175x
-LIBS:uda1361ts
+EESchema Schematic File Version 4
 LIBS:KickerKast-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -46,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L PIC18F2550 U1
+L KickerKast-rescue:PIC18F2550 U1
 U 1 1 57F952B9
 P 3400 3200
 F 0 "U1" H 4600 2250 60  0000 C CNN
@@ -57,7 +26,7 @@ F 3 "" H 3100 2900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X06 P3
+L KickerKast-rescue:CONN_01X06 P3
 U 1 1 57FA1CFC
 P 5800 1950
 F 0 "P3" H 5800 2300 50  0000 C CNN
@@ -68,7 +37,7 @@ F 3 "" H 5800 1950 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_02X05 P5
+L KickerKast-rescue:CONN_02X05 P5
 U 1 1 57FA1D91
 P 7850 1550
 F 0 "P5" H 7850 1850 50  0000 C CNN
@@ -79,7 +48,7 @@ F 3 "" H 7850 350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_02X05 P6
+L KickerKast-rescue:CONN_02X05 P6
 U 1 1 57FA1DC5
 P 9250 1500
 F 0 "P6" H 9250 1800 50  0000 C CNN
@@ -90,7 +59,7 @@ F 3 "" H 9250 300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L BC547 Q1
+L KickerKast-rescue:BC547 Q1
 U 1 1 57FA1E67
 P 7400 2250
 F 0 "Q1" H 7600 2325 50  0000 L CNN
@@ -101,7 +70,7 @@ F 3 "" H 7400 2250 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L BC547 Q2
+L KickerKast-rescue:BC547 Q2
 U 1 1 57FA1F52
 P 8050 2700
 F 0 "Q2" H 8250 2775 50  0000 L CNN
@@ -112,7 +81,7 @@ F 3 "" H 8050 2700 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L BC547 Q3
+L KickerKast-rescue:BC547 Q3
 U 1 1 57FA1F92
 P 8800 3200
 F 0 "Q3" H 9000 3275 50  0000 L CNN
@@ -123,7 +92,7 @@ F 3 "" H 8800 3200 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L BC547 Q4
+L KickerKast-rescue:BC547 Q4
 U 1 1 57FA1FCF
 P 9500 3650
 F 0 "Q4" H 9700 3725 50  0000 L CNN
@@ -134,7 +103,7 @@ F 3 "" H 9500 3650 50  0000 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L Device:R R7
 U 1 1 57FA240B
 P 6950 2250
 F 0 "R7" V 7030 2250 50  0000 C CNN
@@ -145,7 +114,7 @@ F 3 "" H 6950 2250 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R8
+L Device:R R8
 U 1 1 57FA256A
 P 7550 2700
 F 0 "R8" V 7630 2700 50  0000 C CNN
@@ -156,7 +125,7 @@ F 3 "" H 7550 2700 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R9
+L Device:R R9
 U 1 1 57FA25BA
 P 8300 3200
 F 0 "R9" V 8380 3200 50  0000 C CNN
@@ -167,7 +136,7 @@ F 3 "" H 8300 3200 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R10
+L Device:R R10
 U 1 1 57FA260B
 P 9050 3650
 F 0 "R10" V 9130 3650 50  0000 C CNN
@@ -178,7 +147,7 @@ F 3 "" H 9050 3650 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L GND #PWR01
+L power:GND #PWR01
 U 1 1 57FA265F
 P 7500 2450
 F 0 "#PWR01" H 7500 2200 50  0001 C CNN
@@ -189,7 +158,7 @@ F 3 "" H 7500 2450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L power:GND #PWR02
 U 1 1 57FA26A1
 P 8150 2900
 F 0 "#PWR02" H 8150 2650 50  0001 C CNN
@@ -200,7 +169,7 @@ F 3 "" H 8150 2900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L power:GND #PWR03
 U 1 1 57FA26C9
 P 8900 3400
 F 0 "#PWR03" H 8900 3150 50  0001 C CNN
@@ -211,7 +180,7 @@ F 3 "" H 8900 3400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR04
+L power:GND #PWR04
 U 1 1 57FA26F1
 P 9600 3850
 F 0 "#PWR04" H 9600 3600 50  0001 C CNN
@@ -270,7 +239,7 @@ a
 Text Label 5300 3400 0    60   ~ 0
 b
 $Comp
-L BARREL_JACK CON1
+L KickerKast-rescue:BARREL_JACK CON1
 U 1 1 57FA3A98
 P 4050 1250
 F 0 "CON1" H 4050 1500 50  0000 C CNN
@@ -281,7 +250,7 @@ F 3 "" H 4050 1250 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR05
+L power:+5V #PWR05
 U 1 1 57FA3B9D
 P 3600 900
 F 0 "#PWR05" H 3600 750 50  0001 C CNN
@@ -292,7 +261,7 @@ F 3 "" H 3600 900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR06
+L power:GND #PWR06
 U 1 1 57FA3BCB
 P 3600 1600
 F 0 "#PWR06" H 3600 1350 50  0001 C CNN
@@ -303,7 +272,7 @@ F 3 "" H 3600 1600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C2
+L Device:C C2
 U 1 1 57FA3D67
 P 3000 1250
 F 0 "C2" H 3025 1350 50  0000 L CNN
@@ -314,7 +283,7 @@ F 3 "" H 3000 1250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L Device:R R3
 U 1 1 57FA3E3C
 P 2600 1050
 F 0 "R3" V 2680 1050 50  0000 C CNN
@@ -325,7 +294,7 @@ F 3 "" H 2600 1050 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L LED D1
+L KickerKast-rescue:LED D1
 U 1 1 57FA3E99
 P 2300 1300
 F 0 "D1" H 2300 1400 50  0000 C CNN
@@ -336,7 +305,7 @@ F 3 "" H 2300 1300 50  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L CP C3
+L Device:CP C3
 U 1 1 57FA4200
 P 3300 1250
 F 0 "C3" H 3325 1350 50  0000 L CNN
@@ -347,7 +316,7 @@ F 3 "" H 3300 1250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C1
+L Device:C C1
 U 1 1 57FA43D7
 P 1850 4450
 F 0 "C1" H 1875 4550 50  0000 L CNN
@@ -358,7 +327,7 @@ F 3 "" H 1850 4450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C4
+L Device:C C4
 U 1 1 57FA446C
 P 5950 3550
 F 0 "C4" H 5975 3650 50  0000 L CNN
@@ -369,7 +338,7 @@ F 3 "" H 5950 3550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L power:GND #PWR07
 U 1 1 57FA461B
 P 1850 4750
 F 0 "#PWR07" H 1850 4500 50  0001 C CNN
@@ -380,7 +349,7 @@ F 3 "" H 1850 4750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR08
+L power:+5V #PWR08
 U 1 1 57FA4841
 P 5950 3350
 F 0 "#PWR08" H 5950 3200 50  0001 C CNN
@@ -391,7 +360,7 @@ F 3 "" H 5950 3350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR09
+L power:GND #PWR09
 U 1 1 57FA487B
 P 5950 3750
 F 0 "#PWR09" H 5950 3500 50  0001 C CNN
@@ -402,7 +371,7 @@ F 3 "" H 5950 3750 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_PUSH SW1
+L KickerKast-rescue:SW_PUSH SW1
 U 1 1 57FA4A23
 P 1300 2700
 F 0 "SW1" H 1450 2810 50  0000 C CNN
@@ -413,7 +382,7 @@ F 3 "" H 1300 2700 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR010
+L power:GND #PWR010
 U 1 1 57FA4B32
 P 900 2800
 F 0 "#PWR010" H 900 2550 50  0001 C CNN
@@ -424,7 +393,7 @@ F 3 "" H 900 2800 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R1
+L Device:R R1
 U 1 1 57FA4CBA
 P 1800 2450
 F 0 "R1" V 1880 2450 50  0000 C CNN
@@ -435,7 +404,7 @@ F 3 "" H 1800 2450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR011
+L power:+5V #PWR011
 U 1 1 57FA4D09
 P 1800 2200
 F 0 "#PWR011" H 1800 2050 50  0001 C CNN
@@ -446,7 +415,7 @@ F 3 "" H 1800 2200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR012
+L power:+5V #PWR012
 U 1 1 57FA551F
 P 5500 1600
 F 0 "#PWR012" H 5500 1450 50  0001 C CNN
@@ -457,7 +426,7 @@ F 3 "" H 5500 1600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR013
+L power:GND #PWR013
 U 1 1 57FA555D
 P 5500 2350
 F 0 "#PWR013" H 5500 2100 50  0001 C CNN
@@ -472,7 +441,7 @@ SENS1
 Text Label 1600 2900 0    60   ~ 0
 SENS2
 $Comp
-L GND #PWR014
+L power:GND #PWR014
 U 1 1 57FA59FF
 P 1600 3400
 F 0 "#PWR014" H 1600 3150 50  0001 C CNN
@@ -483,7 +452,7 @@ F 3 "" H 1600 3400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Crystal Y1
+L Device:Crystal Y1
 U 1 1 57FA5AE9
 P 1050 3550
 F 0 "Y1" H 1050 3700 50  0000 C CNN
@@ -494,7 +463,7 @@ F 3 "" H 1050 3550 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L CONN_02X05 P1
+L KickerKast-rescue:CONN_02X05 P1
 U 1 1 57FA5EA1
 P 3400 5850
 F 0 "P1" H 3400 6150 50  0000 C CNN
@@ -505,7 +474,7 @@ F 3 "" H 3400 4650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_02X05 P2
+L KickerKast-rescue:CONN_02X05 P2
 U 1 1 57FA5FD2
 P 5300 5850
 F 0 "P2" H 5300 6150 50  0000 C CNN
@@ -516,7 +485,7 @@ F 3 "" H 5300 4650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
+L Device:R R2
 U 1 1 57FA617A
 P 2350 5150
 F 0 "R2" V 2430 5150 50  0000 C CNN
@@ -527,7 +496,7 @@ F 3 "" H 2350 5150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R4
+L Device:R R4
 U 1 1 57FA6202
 P 2700 5150
 F 0 "R4" V 2780 5150 50  0000 C CNN
@@ -538,7 +507,7 @@ F 3 "" H 2700 5150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R5
+L Device:R R5
 U 1 1 57FA63EE
 P 4600 5150
 F 0 "R5" V 4680 5150 50  0000 C CNN
@@ -549,7 +518,7 @@ F 3 "" H 4600 5150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R6
+L Device:R R6
 U 1 1 57FA6480
 P 4900 5150
 F 0 "R6" V 4980 5150 50  0000 C CNN
@@ -560,7 +529,7 @@ F 3 "" H 4900 5150 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR015
+L power:+5V #PWR015
 U 1 1 57FA666C
 P 2350 5000
 F 0 "#PWR015" H 2350 4850 50  0001 C CNN
@@ -571,7 +540,7 @@ F 3 "" H 2350 5000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR016
+L power:+5V #PWR016
 U 1 1 57FA66B8
 P 2700 5000
 F 0 "#PWR016" H 2700 4850 50  0001 C CNN
@@ -582,7 +551,7 @@ F 3 "" H 2700 5000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR017
+L power:+5V #PWR017
 U 1 1 57FA6704
 P 4600 5000
 F 0 "#PWR017" H 4600 4850 50  0001 C CNN
@@ -593,7 +562,7 @@ F 3 "" H 4600 5000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR018
+L power:+5V #PWR018
 U 1 1 57FA6750
 P 4900 5000
 F 0 "#PWR018" H 4900 4850 50  0001 C CNN
@@ -608,7 +577,7 @@ SENS1
 Text Label 5350 5350 0    60   ~ 0
 SENS2
 $Comp
-L GND #PWR019
+L power:GND #PWR019
 U 1 1 57FA7B42
 P 3400 6250
 F 0 "#PWR019" H 3400 6000 50  0001 C CNN
@@ -619,7 +588,7 @@ F 3 "" H 3400 6250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR020
+L power:GND #PWR020
 U 1 1 57FA7B8C
 P 5300 6250
 F 0 "#PWR020" H 5300 6000 50  0001 C CNN
@@ -630,7 +599,7 @@ F 3 "" H 5300 6250 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X04 P4
+L KickerKast-rescue:CONN_01X04 P4
 U 1 1 57FA7EFE
 P 5950 4300
 F 0 "P4" H 5950 4550 50  0000 C CNN
@@ -641,7 +610,7 @@ F 3 "" H 5950 4300 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR021
+L power:+5V #PWR021
 U 1 1 57FA8147
 P 5700 4100
 F 0 "#PWR021" H 5700 3950 50  0001 C CNN
@@ -652,7 +621,7 @@ F 3 "" H 5700 4100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR022
+L power:GND #PWR022
 U 1 1 57FA8195
 P 5700 4500
 F 0 "#PWR022" H 5700 4250 50  0001 C CNN
@@ -671,7 +640,7 @@ VDD
 Text Label 5700 4450 0    60   ~ 0
 GND
 $Comp
-L CONN_01X05 P7
+L KickerKast-rescue:CONN_01X05 P7
 U 1 1 580B7586
 P 1000 5800
 F 0 "P7" H 1000 6100 50  0000 C CNN
@@ -712,15 +681,15 @@ Wire Wire Line
 Wire Wire Line
 	9500 1500 9600 1500
 Wire Wire Line
-	6400 1350 7600 1350
+	6400 1350 7050 1350
 Wire Wire Line
-	6400 1450 7600 1450
+	6400 1450 7150 1450
 Wire Wire Line
-	7600 1650 7350 1650
+	7600 1650 7450 1650
 Wire Wire Line
 	7350 1550 6400 1550
 Wire Wire Line
-	7600 1750 7250 1750
+	7600 1750 7550 1750
 Wire Wire Line
 	7250 1650 6400 1650
 Wire Wire Line
@@ -778,9 +747,9 @@ Wire Wire Line
 Wire Wire Line
 	4950 2700 5300 2700
 Wire Wire Line
-	4950 2800 5300 2800
+	4950 2800 5050 2800
 Wire Wire Line
-	4950 2900 5300 2900
+	4950 2900 5150 2900
 Wire Wire Line
 	4950 3000 5300 3000
 Wire Wire Line
@@ -794,25 +763,25 @@ Wire Wire Line
 Wire Wire Line
 	3750 1350 3600 1350
 Wire Wire Line
-	3600 1250 3600 1600
+	3600 1250 3600 1350
 Wire Wire Line
 	3600 1150 3750 1150
 Wire Wire Line
-	3600 900  3600 1150
+	3600 900  3600 1050
 Wire Wire Line
 	3750 1250 3600 1250
 Connection ~ 3600 1350
 Wire Wire Line
 	2300 1500 2300 1550
 Wire Wire Line
-	2300 1550 3600 1550
+	2300 1550 3000 1550
 Connection ~ 3600 1550
 Wire Wire Line
 	2300 1100 2300 1050
 Wire Wire Line
 	2300 1050 2450 1050
 Wire Wire Line
-	2750 1050 3600 1050
+	2750 1050 3000 1050
 Connection ~ 3600 1050
 Wire Wire Line
 	3000 1100 3000 1050
@@ -853,7 +822,7 @@ Wire Wire Line
 Wire Wire Line
 	900  2700 1000 2700
 Wire Wire Line
-	1600 2700 2000 2700
+	1600 2700 1800 2700
 Wire Wire Line
 	1800 2200 1800 2300
 Wire Wire Line
@@ -918,7 +887,7 @@ Wire Wire Line
 Wire Wire Line
 	2350 5750 3150 5750
 Wire Wire Line
-	2700 5300 2700 5650
+	2700 5300 2700 5350
 Wire Wire Line
 	2700 5650 3150 5650
 Wire Wire Line
@@ -926,7 +895,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 5750 5050 5750
 Wire Wire Line
-	4900 5300 4900 5650
+	4900 5300 4900 5350
 Wire Wire Line
 	4900 5650 5050 5650
 Wire Wire Line
@@ -938,11 +907,11 @@ Connection ~ 4900 5350
 Wire Wire Line
 	3150 5850 3100 5850
 Wire Wire Line
-	3100 5850 3100 6200
+	3100 5850 3100 5950
 Wire Wire Line
-	3100 6200 3700 6200
+	3100 6200 3400 6200
 Wire Wire Line
-	3700 6200 3700 5650
+	3700 6200 3700 6050
 Wire Wire Line
 	3700 5650 3650 5650
 Wire Wire Line
@@ -966,11 +935,11 @@ Connection ~ 3700 5750
 Wire Wire Line
 	5050 5850 5000 5850
 Wire Wire Line
-	5000 5850 5000 6200
+	5000 5850 5000 5950
 Wire Wire Line
-	5000 6200 5600 6200
+	5000 6200 5300 6200
 Wire Wire Line
-	5600 6200 5600 5650
+	5600 6200 5600 6050
 Wire Wire Line
 	5600 5650 5550 5650
 Wire Wire Line
@@ -1024,13 +993,13 @@ Wire Wire Line
 Wire Wire Line
 	9600 1500 9600 3450
 Wire Wire Line
-	7550 1150 9900 1150
+	7550 1150 8200 1150
 Wire Wire Line
-	7450 1050 9800 1050
+	7450 1050 8300 1050
 Wire Wire Line
-	7350 950  9700 950 
+	7350 950  8400 950 
 Wire Wire Line
-	7250 850  9600 850 
+	7250 850  8500 850 
 Wire Wire Line
 	9000 1300 8700 1300
 Wire Wire Line
@@ -1125,4 +1094,74 @@ Text Label 1400 5900 0    60   ~ 0
 RC4
 Text Label 1400 6000 0    60   ~ 0
 RC5
+Wire Wire Line
+	3600 1350 3600 1550
+Wire Wire Line
+	3600 1550 3600 1600
+Wire Wire Line
+	3600 1050 3600 1150
+Wire Wire Line
+	3000 1050 3300 1050
+Wire Wire Line
+	3000 1550 3300 1550
+Wire Wire Line
+	3300 1050 3600 1050
+Wire Wire Line
+	3300 1550 3600 1550
+Wire Wire Line
+	1800 2700 1950 2700
+Wire Wire Line
+	1950 2700 2000 2700
+Wire Wire Line
+	5050 2800 5300 2800
+Wire Wire Line
+	5150 2900 5300 2900
+Wire Wire Line
+	2700 5350 2700 5650
+Wire Wire Line
+	4900 5350 4900 5650
+Wire Wire Line
+	3100 5950 3100 6050
+Wire Wire Line
+	3100 6050 3100 6200
+Wire Wire Line
+	3700 6050 3700 5950
+Wire Wire Line
+	3700 5950 3700 5850
+Wire Wire Line
+	3700 5850 3700 5750
+Wire Wire Line
+	3700 5750 3700 5650
+Wire Wire Line
+	5600 5750 5600 5650
+Wire Wire Line
+	5600 5850 5600 5750
+Wire Wire Line
+	5600 5950 5600 5850
+Wire Wire Line
+	5600 6050 5600 5950
+Wire Wire Line
+	5000 6050 5000 6200
+Wire Wire Line
+	5000 5950 5000 6050
+Wire Wire Line
+	3400 6200 3700 6200
+Wire Wire Line
+	5300 6200 5600 6200
+Wire Wire Line
+	7550 1750 7250 1750
+Wire Wire Line
+	7450 1650 7350 1650
+Wire Wire Line
+	7150 1450 7600 1450
+Wire Wire Line
+	7050 1350 7600 1350
+Wire Wire Line
+	8500 850  9600 850 
+Wire Wire Line
+	8400 950  9700 950 
+Wire Wire Line
+	8300 1050 9800 1050
+Wire Wire Line
+	8200 1150 9900 1150
 $EndSCHEMATC
